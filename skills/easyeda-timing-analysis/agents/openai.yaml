@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · timing-analysis"
+  short_description: "分析 PCB 信号路径延迟、Setup/Hold 和时序余量，或在原理图中生成 WaveDrom 时序说明。"
+  default_prompt: "使用 $easyeda-timing-analysis 处理我的嘉立创 EDA 任务。"

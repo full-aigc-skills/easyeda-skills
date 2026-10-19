@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · extension-use"
+  short_description: "通过嘉立创 EDA 内置 MCP 调用 EasyEDA MCP 的 .eext 领域接口，发现能力、只读检查工程，并按授权设计、"
+  default_prompt: "使用 $easyeda-extension-use 处理我的嘉立创 EDA 任务。"

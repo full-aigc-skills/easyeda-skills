@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · use"
+  short_description: "使用嘉立创 EDA / EasyEDA 完成设计、检查或导出时选择对应技能；执行入口为客户端内置 MCP。"
+  default_prompt: "使用 $easyeda-use 处理我的嘉立创 EDA 任务。"

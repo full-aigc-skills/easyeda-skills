@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · netlist-review"
+  short_description: "分析原理图网表、器件连接关系、电源网络和悬空引脚；默认只读检查。"
+  default_prompt: "使用 $easyeda-netlist-review 处理我的嘉立创 EDA 任务。"

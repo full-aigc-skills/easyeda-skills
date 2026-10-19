@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · eprj3"
+  short_description: "创建、检查或编辑 EasyEDA 文件夹式 .eprj3 工程，优先通过内置 MCP 操作，直接写格式时核对完整格式依赖。"
+  default_prompt: "使用 $easyeda-eprj3 处理我的嘉立创 EDA 任务。"

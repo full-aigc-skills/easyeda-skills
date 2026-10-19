@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · schematic-net-fanout"
+  short_description: "按实际引脚方向排列原理图元件、生成电源标识符和信号端口，或修改已有引脚扇出。"
+  default_prompt: "使用 $easyeda-schematic-net-fanout 处理我的嘉立创 EDA 任务。"

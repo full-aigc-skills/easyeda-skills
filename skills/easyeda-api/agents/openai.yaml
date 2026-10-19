@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · api"
+  short_description: "查询并使用 EasyEDA 专业版 eda.* API，读取对象与引脚、执行原生 invoke，替代官方 Skill 的独立 B"
+  default_prompt: "使用 $easyeda-api 处理我的嘉立创 EDA 任务。"

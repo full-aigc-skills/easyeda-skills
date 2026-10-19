@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · cad-integration"
+  short_description: "将 EasyEDA PCB 与 FreeCAD、SolidWorks、Fusion 360 对接，导入 DWG 或使用 Blen"
+  default_prompt: "使用 $easyeda-cad-integration 处理我的嘉立创 EDA 任务。"

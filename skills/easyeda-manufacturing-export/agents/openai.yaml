@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · manufacturing-export"
+  short_description: "从已核对的 EasyEDA PCB 导出 Gerber、钻孔、BOM、贴片坐标或 STEP，并检查制造包完整性。"
+  default_prompt: "使用 $easyeda-manufacturing-export 处理我的嘉立创 EDA 任务。"

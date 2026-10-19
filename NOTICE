@@ -1,0 +1,7 @@
+EasyEDA Skills
+
+本项目原创中文工作流与适配代码使用 Apache-2.0。不是嘉立创官方产品，也不附带 EDA 客户端。
+
+官方技能整合来源：easyeda-api-skill、easyeda-enhanced-schematic-skill、easyeda-eprj3-skill、easyeda-format-skill、extension-dev-skill。各来源的固定修订、实际读取文件和许可依据见 source-lock.json；本文不把单个 SKILL.md 的 MIT 声明扩展为整个组织统一许可。
+
+本包重写工作流并适配内置 MCP，没有捆绑上游 Bridge Server、EDA 引擎或第三方布线器。GitHub 来源链接及接口名称用于识别和技术引用；未将第三方源码整体重新许可。直接复制上游代码前须保留其文件版权及许可。EasyEDA、嘉立创 EDA 的商标与官方图标属于其权利人。

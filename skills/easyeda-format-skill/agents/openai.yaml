@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · format-skill"
+  short_description: "读取或生成 EasyEDA 专业版原理图、PCB、符号、封装的底层记录，处理 DOCHEAD、ticket、Schema 和文档"
+  default_prompt: "使用 $easyeda-format-skill 处理我的嘉立创 EDA 任务。"

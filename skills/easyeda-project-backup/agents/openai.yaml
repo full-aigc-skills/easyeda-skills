@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · project-backup"
+  short_description: "备份、批量归档或导出 EasyEDA 工程与库，明确目录范围并验证可重新打开。"
+  default_prompt: "使用 $easyeda-project-backup 处理我的嘉立创 EDA 任务。"

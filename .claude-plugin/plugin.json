@@ -1,0 +1,7 @@
+{
+  "name": "easyeda-skills",
+  "version": "0.1.0-dev.20261019.4",
+  "description": "嘉立创 EDA 领域技能包，使用客户端内置 MCP",
+  "license": "Apache-2.0",
+  "skills": "./skills/"
+}

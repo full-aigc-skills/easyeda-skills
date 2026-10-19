@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · mcp-setup"
+  short_description: "连接或排查嘉立创 EDA 内置 MCP，诊断 macOS 启动 EPERM、会话为空和原生工具发现问题。"
+  default_prompt: "使用 $easyeda-mcp-setup 处理我的嘉立创 EDA 任务。"

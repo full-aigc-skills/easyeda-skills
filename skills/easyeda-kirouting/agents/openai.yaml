@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · kirouting"
+  short_description: "评估或调用已有 KiRouting 桥接，对 EasyEDA PCB 执行外部布线并验证坐标、层和规则转换。"
+  default_prompt: "使用 $easyeda-kirouting 处理我的嘉立创 EDA 任务。"

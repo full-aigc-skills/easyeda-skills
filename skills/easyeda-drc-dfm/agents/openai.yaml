@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · drc-dfm"
+  short_description: "检查原理图、PCB DRC 与嘉立创制造约束，区分完整通过、部分检查和执行失败。"
+  default_prompt: "使用 $easyeda-drc-dfm 处理我的嘉立创 EDA 任务。"

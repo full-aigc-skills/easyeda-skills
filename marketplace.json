@@ -1,0 +1,14 @@
+{
+  "name": "easyeda-skills",
+  "owner": {
+    "name": "Full AIGC Skills"
+  },
+  "plugins": [
+    {
+      "name": "easyeda-skills",
+      "source": "./",
+      "description": "嘉立创 EDA 原理图、PCB 与制造技能",
+      "version": "0.1.0-dev.20261019.4"
+    }
+  ]
+}

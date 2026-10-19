@@ -1,0 +1,10 @@
+{
+  "name": "easyeda-skills",
+  "version": "0.1.0-dev.20261019.4",
+  "private": true,
+  "description": "33 个面向嘉立创 EDA 内置 MCP 的技能",
+  "scripts": {
+    "check": "python3 -B scripts/validate_package.py",
+    "test": "python3 -B -m unittest discover -s tests"
+  }
+}

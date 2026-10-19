@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · knowledge-base"
+  short_description: "在已有 EasyEDA 本地 RAG 知识库中检索设计资料，检查引用来源与更新范围。"
+  default_prompt: "使用 $easyeda-knowledge-base 处理我的嘉立创 EDA 任务。"

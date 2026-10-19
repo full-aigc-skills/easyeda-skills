@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · power-integrity"
+  short_description: "通过已有 PADEN 或 KiPIDA 扩展评估 PCB 电源分配网络或直流压降，并核对提取模型。"
+  default_prompt: "使用 $easyeda-power-integrity 处理我的嘉立创 EDA 任务。"

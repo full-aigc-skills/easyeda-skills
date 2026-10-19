@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · freerouting"
+  short_description: "将 EasyEDA PCB 导出 DSN，调用已有 Freerouting 服务并导入 SES；适用于内置布线之外的备选路径。"
+  default_prompt: "使用 $easyeda-freerouting 处理我的嘉立创 EDA 任务。"

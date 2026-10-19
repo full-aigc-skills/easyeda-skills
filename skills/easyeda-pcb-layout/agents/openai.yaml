@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · pcb-layout"
+  short_description: "把原理图同步到 PCB，设置板框、固定位置和禁布区，并按功能块布局或检查自动布局结果。"
+  default_prompt: "使用 $easyeda-pcb-layout 处理我的嘉立创 EDA 任务。"

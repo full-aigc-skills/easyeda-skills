@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · extension-development"
+  short_description: "开发或调试嘉立创 EDA .eext 扩展，查询目标 SDK 类型、注册菜单或上层接口并打包。"
+  default_prompt: "使用 $easyeda-extension-development 处理我的嘉立创 EDA 任务。"

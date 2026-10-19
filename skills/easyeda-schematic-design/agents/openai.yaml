@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · schematic-design"
+  short_description: "将明确的电路需求转成器件、引脚连接与可编辑原理图；适用于 MCU 最小系统、电源和传感器接口设计。"
+  default_prompt: "使用 $easyeda-schematic-design 处理我的嘉立创 EDA 任务。"

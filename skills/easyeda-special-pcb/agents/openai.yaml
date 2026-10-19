@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · special-pcb"
+  short_description: "生成 NFC/无线充电线圈、电热膜蛇形线路或 FPC 特殊结构，并核对电气目标和工艺限制。"
+  default_prompt: "使用 $easyeda-special-pcb 处理我的嘉立创 EDA 任务。"

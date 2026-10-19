@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · documentation"
+  short_description: "根据实际 EasyEDA 工程生成设计说明、统计报告、Markdown/LaTeX 注释或 PLM 对接资料。"
+  default_prompt: "使用 $easyeda-documentation 处理我的嘉立创 EDA 任务。"

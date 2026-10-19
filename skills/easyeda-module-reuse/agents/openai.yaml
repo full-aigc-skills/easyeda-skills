@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · module-reuse"
+  short_description: "检索 EasyEDA 个人、团队或本地复用模块，并放置、检查模块之间的接口连接。"
+  default_prompt: "使用 $easyeda-module-reuse 处理我的嘉立创 EDA 任务。"

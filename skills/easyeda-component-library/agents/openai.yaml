@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · component-library"
+  short_description: "查询、匹配或维护 EasyEDA 器件、符号、封装与扩展属性，包括 AI 建库结果的复核。"
+  default_prompt: "使用 $easyeda-component-library 处理我的嘉立创 EDA 任务。"

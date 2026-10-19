@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · silkscreen-art"
+  short_description: "制作 EasyEDA 文字、二维码、图片轮廓、涂鸦或彩色丝印，保持制造层与实际导电图形分离。"
+  default_prompt: "使用 $easyeda-silkscreen-art 处理我的嘉立创 EDA 任务。"

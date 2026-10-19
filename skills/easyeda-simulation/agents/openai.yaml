@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · simulation"
+  short_description: "对 EasyEDA 原理图使用已有 NGspice、LTspice、SimulIDE 或 CircuitJS 集成做明确目标的电"
+  default_prompt: "使用 $easyeda-simulation 处理我的嘉立创 EDA 任务。"

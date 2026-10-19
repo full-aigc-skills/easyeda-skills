@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · datasheet-analysis"
+  short_description: "从器件数据手册提取引脚、电源、封装尺寸和参考电路，供 EasyEDA 选型、建库或设计验证。"
+  default_prompt: "使用 $easyeda-datasheet-analysis 处理我的嘉立创 EDA 任务。"

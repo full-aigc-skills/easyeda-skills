@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · pcb-routing"
+  short_description: "使用 EasyEDA 内置 autoRouting 布线，设置网络、启用层与规则并验证失败网络和实际连通性。"
+  default_prompt: "使用 $easyeda-pcb-routing 处理我的嘉立创 EDA 任务。"

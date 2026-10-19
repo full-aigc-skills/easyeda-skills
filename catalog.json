@@ -1,0 +1,1270 @@
+{
+  "schemaVersion": 1,
+  "version": "0.1.0-dev.20261019.4",
+  "displayName": "EasyEDA",
+  "skills": [
+    {
+      "name": "easyeda-use",
+      "description": "使用嘉立创 EDA / EasyEDA 完成设计、检查或导出时选择对应技能；执行入口为客户端内置 MCP。",
+      "sources": [
+        "easyeda-client-cli",
+        "easyeda-api-skill"
+      ],
+      "classes": [
+        "DMT_Project",
+        "DMT_SelectControl"
+      ],
+      "inputs": [
+        "目标工程或新工程位置",
+        "只读、修改或生成的范围",
+        "希望得到的工程和导出文件"
+      ],
+      "steps": [
+        "先发现原生 help/discover/call 工具并查询 doctor",
+        "列出会话，匹配用户指定工程；无工程则报告而不打开最近项",
+        "按任务选择本包对应技能，保持原有授权范围",
+        "在目标客户端查询 API 签名后执行",
+        "按实际操作回读对象、网表或文件，分别报告未完成项"
+      ],
+      "checks": [
+        "会话、工程和目标文档匹配",
+        "没有将静态文档当成执行结果",
+        "交付包含可继续编辑的工程"
+      ],
+      "pitfalls": [
+        "标准版与专业版的 API 和格式不同",
+        "MCP 可连接不代表已经打开工程"
+      ],
+      "example": "只读检查我当前的原理图，先告诉我工程名称。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-mcp-setup",
+      "description": "连接或排查嘉立创 EDA 内置 MCP，诊断 macOS 启动 EPERM、会话为空和原生工具发现问题。",
+      "sources": [
+        "easyeda-client-cli",
+        "easyeda-api-skill"
+      ],
+      "classes": [
+        "SYS_Environment",
+        "DMT_Project"
+      ],
+      "inputs": [
+        "已安装客户端的位置",
+        "本机 MCP 地址",
+        "期望只读验证的工程"
+      ],
+      "steps": [
+        "先用原生 MCP initialize/tools/list 确认服务身份",
+        "调用 help 后查询 doctor 与 session.list",
+        "macOS 直接启动出现文稿权限对话框时，显式使用 LaunchServices 启动原生 HTTP 服务",
+        "只读查询选定会话的当前工程与文档",
+        "记录客户端版本、桥接状态和实际返回，不为 null 伪造项目"
+      ],
+      "checks": [
+        "服务名为 JLCEDA Pro 或 EasyEDA Pro",
+        "bridge connected 与 versionMatch 分别检查",
+        "保留原有宿主配置"
+      ],
+      "pitfalls": [
+        "不得靠增加 timeout 掩盖原生权限对话框",
+        "不要同时安装 Gateway 路径来替代原生 MCP 故障定位"
+      ],
+      "example": "连接本地专业版，仅验证能否读取工程。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-api",
+      "description": "查询并使用 EasyEDA 专业版 eda.* API，读取对象与引脚、执行原生 invoke，替代官方 Skill 的独立 Bridge 传输。",
+      "sources": [
+        "easyeda-api-skill",
+        "easyeda-client-cli",
+        "easyeda-api-i18n",
+        "eext-chat-with-ai-kimi"
+      ],
+      "classes": [
+        "DMT_Project",
+        "SCH_PrimitiveComponent",
+        "PCB_PrimitiveComponent"
+      ],
+      "inputs": [
+        "目标会话和文档",
+        "要操作的对象与动作"
+      ],
+      "steps": [
+        "调用原生 help 查看真实命令",
+        "用 doc.api 渐进查询类、方法、参数、返回和枚举",
+        "通过 invoke 在选定会话执行最小操作，读写按用户范围区分",
+        "使用返回 primitiveId 定位对象；引脚坐标由 API 回读",
+        "检查原生 ok、MCP isError 和业务结果后再继续"
+      ],
+      "checks": [
+        "API 在目标客户端存在",
+        "返回对象和数量符合请求",
+        "写入后回读目标对象"
+      ],
+      "pitfalls": [
+        "返回 undefined 可能是契约也可能是错误，须查签名",
+        "MCP 外层成功不能覆盖内层失败"
+      ],
+      "example": "查询放置元件 API，读取 R1 的实际引脚坐标。",
+      "origin": "official-adapted",
+      "upstreamSkill": "easyeda-api"
+    },
+    {
+      "name": "easyeda-schematic-design",
+      "description": "将明确的电路需求转成器件、引脚连接与可编辑原理图；适用于 MCU 最小系统、电源和传感器接口设计。",
+      "sources": [
+        "eext-easyeda-api-agent",
+        "eext-ai-reuse-block-placement",
+        "eext-generate-schematic-from-netlist"
+      ],
+      "classes": [
+        "LIB_Device",
+        "SCH_PrimitiveComponent",
+        "SCH_PrimitiveWire",
+        "SCH_Drc"
+      ],
+      "inputs": [
+        "供电、电流、接口与功能参数",
+        "器件或模块约束",
+        "目标工程与图页"
+      ],
+      "steps": [
+        "形成器件表及 位号:引脚号→网络名 的结构化连接描述",
+        "优先查询实际库器件和经过核实的复用电路",
+        "按功能块放置并读取真实引脚坐标",
+        "生成导线、标识符和必要参数，再导出实际网表比对",
+        "进行原理图 DRC；需要时验证计算和仿真"
+      ],
+      "checks": [
+        "实际网表与连接描述一致",
+        "关键电源、复位、上拉和去耦有明确依据",
+        "工程可在客户端继续编辑"
+      ],
+      "pitfalls": [
+        "DRC 不证明电路功能正确",
+        "不同芯片或封装的同名引脚不可仅凭外形匹配"
+      ],
+      "example": "设计一个 3.3V MCU 与 I2C 传感器接口原理图。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-schematic-net-fanout",
+      "description": "按实际引脚方向排列原理图元件、生成电源标识符和信号端口，或修改已有引脚扇出。",
+      "sources": [
+        "easyeda-enhanced-schematic-skill"
+      ],
+      "classes": [
+        "SCH_PrimitiveComponent",
+        "SCH_PrimitiveWire",
+        "SCH_PrimitiveRectangle"
+      ],
+      "inputs": [
+        "库器件 ID 与位号",
+        "引脚到网络的映射",
+        "图页和功能块位置"
+      ],
+      "steps": [
+        "查询并批量获取器件，核对型号与封装",
+        "按元件实际包围盒布置功能块，预留扇出空间",
+        "读取每个引脚的坐标和方向后创建短线与相应标识符",
+        "修改元件时只清理与该元件相关的旧短线与标识符",
+        "导出网表比对同名网络的实际连通性"
+      ],
+      "checks": [
+        "无元件与标识符遮挡",
+        "没有遗留旧网络标签",
+        "电气连接与映射一致"
+      ],
+      "pitfalls": [
+        "原理图坐标单位为 10mil，不能沿用 PCB 的 mil",
+        "删除元件不会自动删除全部相关导线和标识符"
+      ],
+      "example": "整理 ESP32 原理图，将电源与信号引脚扇出到网络标识符。",
+      "origin": "official-adapted",
+      "upstreamSkill": "easyeda-schematic-net-fanout"
+    },
+    {
+      "name": "easyeda-netlist-import",
+      "description": "把已知 EasyEDA 网表重建为原理图，并处理器件查找、引脚映射和部分导入失败。",
+      "sources": [
+        "eext-generate-schematic-from-netlist",
+        "easyeda-netlist-format"
+      ],
+      "classes": [
+        "LIB_Device",
+        "SCH_PrimitiveComponent",
+        "SCH_PrimitiveWire"
+      ],
+      "inputs": [
+        "网表文件及格式",
+        "目标工程与新图页",
+        "库器件匹配规则"
+      ],
+      "steps": [
+        "识别网表格式与组件、引脚和网络结构",
+        "优先用明确供应商编号匹配器件，歧义结果不得选首项冒充确定",
+        "记录每个器件的导入成功、跳过和错误",
+        "回读引脚并创建网络，保留用户网络命名语义",
+        "导出实际网表与输入比较并报告差异"
+      ],
+      "checks": [
+        "没有静默遗漏器件或引脚",
+        "位号和封装匹配",
+        "全部预期连接得到验证"
+      ],
+      "pitfalls": [
+        "上游导入器会跳过失败器件，不能直接当成完整成功",
+        "自动统一大小写可能合并原本不同的网络"
+      ],
+      "example": "把这份 .enet 导入新图页，列出无法匹配的器件。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-netlist-review",
+      "description": "分析原理图网表、器件连接关系、电源网络和悬空引脚；默认只读检查。",
+      "sources": [
+        "eext-netlist-explorer",
+        "eext-signal-absence-detection",
+        "eext-power-net-highlighter",
+        "easyeda-netlist-format",
+        "eext-schematic-pdf-interaction"
+      ],
+      "classes": [
+        "SCH_Net",
+        "SCH_Netlist",
+        "SCH_ManufactureData"
+      ],
+      "inputs": [
+        "当前板子或指定图页",
+        "需要重点检查的网络与规则"
+      ],
+      "steps": [
+        "查询当前工程、板子与图页范围",
+        "读取网表和网络信息，区分器件与网络标识符",
+        "按实际作用域合并跨页网络，核对短接符号",
+        "列出单连接、孤立引脚、悬空标签和关键电源路径",
+        "需要可视化时提供拓扑摘要；高亮动作遵循用户范围"
+      ],
+      "checks": [
+        "报告包含具体位号、引脚和网络",
+        "跨板同名网络未被错误合并",
+        "未把 NC 引脚当成所有情况下的错误"
+      ],
+      "pitfalls": [
+        "网络名存在不等于有实际对端",
+        "高亮会改变显示状态，纯只读任务可仅报告"
+      ],
+      "example": "只读分析原理图，找出供电网络和可能漏接的信号。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-component-library",
+      "description": "查询、匹配或维护 EasyEDA 器件、符号、封装与扩展属性，包括 AI 建库结果的复核。",
+      "sources": [
+        "eext-ai-library-builder",
+        "eext-ai-symbol-builder",
+        "eext-ai-device-standardization",
+        "eext-device-attribute-editor",
+        "eext-update-components-attributes",
+        "eext-component-box"
+      ],
+      "classes": [
+        "LIB_Device",
+        "LIB_Symbol",
+        "LIB_Footprint"
+      ],
+      "inputs": [
+        "型号、数据手册或供应商编号",
+        "目标个人库或团队库",
+        "参数与引脚要求"
+      ],
+      "steps": [
+        "查询候选器件并核对型号、封装与来源",
+        "按数据手册建立引脚号、符号引脚和焊盘映射",
+        "批量属性修改限定目标器件与字段",
+        "生成符号或封装后检查几何、焊盘号与单位",
+        "在新图页试放或回读库对象验证"
+      ],
+      "checks": [
+        "引脚号与封装焊盘一一对应",
+        "属性修改不覆盖无关用户字段",
+        "模型生成内容经数据手册复核"
+      ],
+      "pitfalls": [
+        "AI 建库不证明封装可生产",
+        "库存信息与供应商实时库存不是同一数据"
+      ],
+      "example": "按数据手册检查这个器件的符号和封装引脚映射。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-module-reuse",
+      "description": "检索 EasyEDA 个人、团队或本地复用模块，并放置、检查模块之间的接口连接。",
+      "sources": [
+        "eext-ai-reuse-block-placement"
+      ],
+      "classes": [
+        "LIB_Cbb",
+        "DMT_Board",
+        "DMT_Schematic"
+      ],
+      "inputs": [
+        "模块功能与参数",
+        "目标图页、板子或工程",
+        "已有模块目录"
+      ],
+      "steps": [
+        "从实际目录搜索或推荐模块，不编造 cbbUuid",
+        "读取模块器件、接口和存储来源",
+        "确认当前图页、目标放置形式及范围",
+        "执行模块放置并记录实际落点与新增对象",
+        "核对模块间电源、网络命名和接口参数"
+      ],
+      "checks": [
+        "模块实际存在于所选库",
+        "新增对象和图页属于目标工程",
+        "连接按实际网表复核"
+      ],
+      "pitfalls": [
+        "工程库内嵌副本不一定能作为可放置源",
+        "模块放置不等于模块间已连接"
+      ],
+      "example": "复用已有 USB 供电模块，接到当前 MCU 板。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-eprj3",
+      "description": "创建、检查或编辑 EasyEDA 文件夹式 .eprj3 工程，优先通过内置 MCP 操作，直接写格式时核对完整格式依赖。",
+      "sources": [
+        "easyeda-eprj3-skill",
+        "easyeda-eprj3-format",
+        "easyeda-client-cli"
+      ],
+      "classes": [
+        "DMT_Project",
+        "DMT_Board"
+      ],
+      "inputs": [
+        "新工程目录或现有工程",
+        "图页与 PCB 需求",
+        "实际器件库来源"
+      ],
+      "steps": [
+        "区分 .eprj3 文件夹工程与旧 .eprj2 SQLite 工程",
+        "优先由原生 API 创建骨架、保存与重新打开",
+        "直接生成记录前读取格式规范、Schema 和真实样例",
+        "保留嵌入 SYMBOL、FOOTPRINT、DEVICE 等文档的关联与顺序",
+        "校验格式、在客户端打开并回读网表和 PCB"
+      ],
+      "checks": [
+        "项目索引、文档和库引用完整",
+        "文件格式校验与电气验证分别报告",
+        "旧工程未被强制转换"
+      ],
+      "pitfalls": [
+        "上游文档的 companion 仓库旧名称可能失效，不能盲目 clone",
+        "格式脚本只覆盖部分契约，不能代替真实客户端验证"
+      ],
+      "example": "创建一个新的 .eprj3 工程骨架，保留原有项目。",
+      "origin": "official-adapted",
+      "upstreamSkill": "easyeda-eprj3"
+    },
+    {
+      "name": "easyeda-format-skill",
+      "description": "读取或生成 EasyEDA 专业版原理图、PCB、符号、封装的底层记录，处理 DOCHEAD、ticket、Schema 和文档类型差异。",
+      "sources": [
+        "easyeda-format-skill",
+        "easyeda-file-format",
+        "easyeda-file-format-v2"
+      ],
+      "classes": [
+        "DMT_Project"
+      ],
+      "inputs": [
+        "目标版本与文档类型",
+        "需检查或生成的记录",
+        "工程副本目录"
+      ],
+      "steps": [
+        "先通过 doc.format 查询当前类型并读取官方字段定义",
+        "明确 SCH_PAGE、PCB、SYMBOL 等文档域，按域选 Schema",
+        "生成正确关联文档与记录边界，不从记忆猜字段",
+        "执行与目标版本匹配的校验器；缺依赖时报告而不假称通过",
+        "在工程副本中打开并回读对象与连接"
+      ],
+      "checks": [
+        "DOCHEAD、CANVAS 适用域正确",
+        "记录结束符和 ID 合法",
+        "实际对象与网表和目标一致"
+      ],
+      "pitfalls": [
+        "同名 LINE 在不同文档类型中 Schema 不同",
+        "DELETE_DOC 载荷与原子记录删除不可互换；META 不能随意置空"
+      ],
+      "example": "解释这条 PCB_LINE 记录并按当前格式检查字段。",
+      "origin": "official-adapted",
+      "upstreamSkill": "easyeda-format-skill"
+    },
+    {
+      "name": "easyeda-extension-development",
+      "description": "开发或调试嘉立创 EDA .eext 扩展，查询目标 SDK 类型、注册菜单或上层接口并打包。",
+      "sources": [
+        "extension-dev-skill",
+        "easyeda-api-sdk",
+        "extension-dev-mcp-tools",
+        "eext-extension-demo",
+        "eext-api-debug-tool",
+        "eext-api-test-tool",
+        "eext-external-tool-integration-demo"
+      ],
+      "classes": [
+        "SYS_ExternalApi",
+        "SYS_MessageBus",
+        "SYS_IFrame"
+      ],
+      "inputs": [
+        "目标 SDK 项目",
+        "扩展功能与适用编辑器",
+        "目标客户端版本"
+      ],
+      "steps": [
+        "读取目标项目的 @jlceda/pro-api-types 版本和类型声明",
+        "按需查询 eda mount、方法、重载及枚举，Markdown 示例仅供流程参考",
+        "配置 extension.json 菜单、UUID、入口与权限",
+        "需要供外部 Agent 调用时用 SYS_ExternalApi 注册有帮助信息的上层接口",
+        "构建 .eext 后在目标客户端导入并调用具体功能"
+      ],
+      "checks": [
+        "编译使用的是目标项目 SDK",
+        "外部工具能发现真实注册接口",
+        "导入无日志错误不等于功能验收通过"
+      ],
+      "pitfalls": [
+        "浏览器沙箱不能直接当 Node.js 使用",
+        "插件包与 EDA 内部 .eext 是不同交付物"
+      ],
+      "example": "创建一个只读列出当前 PCB 元件的 .eext 扩展。",
+      "origin": "official-adapted",
+      "upstreamSkill": "extension-dev-skill"
+    },
+    {
+      "name": "easyeda-pcb-layout",
+      "description": "把原理图同步到 PCB，设置板框、固定位置和禁布区，并按功能块布局或检查自动布局结果。",
+      "sources": [
+        "eext-pcb-component-grouping",
+        "eext-batch-place-components",
+        "eext-board-outline-splitter",
+        "easyeda-client-cli"
+      ],
+      "classes": [
+        "PCB_Document",
+        "PCB_PrimitiveComponent",
+        "PCB_PrimitivePolyline",
+        "PCB_PrimitiveRegion"
+      ],
+      "inputs": [
+        "板框、层数与机械尺寸",
+        "连接器和安装孔位置",
+        "关键器件距离与禁布约束"
+      ],
+      "steps": [
+        "读取当前原理图和 PCB 的器件、封装与同步状态",
+        "查询 importChanges 签名并执行授权的同步",
+        "先放置固定器件和关键器件，锁定需要保持的位置",
+        "对剩余器件采用分组或 autoLayout，再回读实际坐标",
+        "检查边界、重叠、去耦距离、天线与机械禁布区"
+      ],
+      "checks": [
+        "器件与封装数量匹配",
+        "固定位置和禁布区未丢失",
+        "布局符合约束而非仅 API 返回成功"
+      ],
+      "pitfalls": [
+        "autoLayout 无参数签名不能证明支持全部布局约束",
+        "板框形状拆分要保留每块板的归属"
+      ],
+      "example": "按 50×40mm 板框布局，USB 接口固定在左边。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-pcb-routing",
+      "description": "使用 EasyEDA 内置 autoRouting 布线，设置网络、启用层与规则并验证失败网络和实际连通性。",
+      "sources": [
+        "easyeda-client-cli",
+        "easyeda-pcb-router",
+        "eext-diff-pair-assistant",
+        "eext-pad-fanout"
+      ],
+      "classes": [
+        "PCB_Document",
+        "PCB_Drc",
+        "PCB_Net"
+      ],
+      "inputs": [
+        "布局完成的 PCB",
+        "线宽、间距、层及过孔规则",
+        "保留已有走线与关键网络要求"
+      ],
+      "steps": [
+        "读取并检查板框、器件布局、启用层和现有走线",
+        "查询 IPCB_AutoRoutingProps 与返回类型，明确保留或重布方式",
+        "关键网络按约束先处理，其余网络调用 autoRouting",
+        "检查 failedNets、成功数量和实际几何，不只检查 success",
+        "重算连接并运行 PCB DRC，报告无法自动解决的网络"
+      ],
+      "checks": [
+        "全部目标网络布通或明确列出失败",
+        "没有损坏已有人工布线",
+        "DRC 结果真实读取"
+      ],
+      "pitfalls": [
+        "接口存在 900 秒上限的版本限制，增加 CLI timeout 不一定解决",
+        "网页示例 nets 与实际 RoutingNets 可能不同，按目标类型查询"
+      ],
+      "example": "保留电源走线，只给剩余信号自动布线。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-freerouting",
+      "description": "将 EasyEDA PCB 导出 DSN，调用已有 Freerouting 服务并导入 SES；适用于内置布线之外的备选路径。",
+      "sources": [
+        "eext-freerouting-intergration",
+        "easyeda-pcb-router"
+      ],
+      "classes": [
+        "PCB_ManufactureData",
+        "PCB_Document",
+        "PCB_Drc"
+      ],
+      "inputs": [
+        "PCB 候选副本",
+        "已安装的 Freerouting 服务",
+        "保留原走线范围"
+      ],
+      "steps": [
+        "确认外部服务健康状态及实际端口，不自动安装",
+        "导出包含几何和规则的 DSN，核对板框和网络",
+        "提交布线并跟踪实际任务状态",
+        "在候选副本导入 SES 后回读走线、过孔和网络",
+        "实际检查 DRC 返回值，比较采用前后的变化"
+      ],
+      "checks": [
+        "DSN 与结果对应同一板卡",
+        "原工程和人工走线受到保护",
+        "SES 导入成功与 DRC 通过分别判断"
+      ],
+      "pitfalls": [
+        "上游实现导入前会删除走线、圆弧和过孔，不能直接照搬",
+        "上游 route 成功不以 DRC 返回值为门禁"
+      ],
+      "example": "用现有 Freerouting 为 PCB 副本布线，保留原稿。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-kirouting",
+      "description": "评估或调用已有 KiRouting 桥接，对 EasyEDA PCB 执行外部布线并验证坐标、层和规则转换。",
+      "sources": [
+        "eext-kirouting-integration"
+      ],
+      "classes": [
+        "PCB_PrimitiveComponent",
+        "PCB_PrimitivePad",
+        "PCB_PrimitiveLine",
+        "PCB_PrimitiveVia"
+      ],
+      "inputs": [
+        "已有桥接服务和引擎",
+        "PCB 副本",
+        "单端或差分等明确约束"
+      ],
+      "steps": [
+        "检查 Python 桥接与布线引擎是否实际可用",
+        "读取焊盘、孔、走线、板框和层，保留坐标单位",
+        "在转换后检查 EasyEDA 与 KiCad 的层和几何映射",
+        "执行选定功能并提取新走线与过孔",
+        "回写候选 PCB 后逐项核对连通与规则"
+      ],
+      "checks": [
+        "mil/mm 和坐标方向一致",
+        "异形焊盘、孔与铜层未被静默简化",
+        "高级功能有实际板卡验证"
+      ],
+      "pitfalls": [
+        "README 宣称支持 DDR 或阻抗不等于目标板验证",
+        "Windows 启动脚本会安装依赖，未授权时不执行"
+      ],
+      "example": "比较 KiRouting 对这个差分接口板的布线结果。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-design-rules",
+      "description": "按明确板厂工艺、叠层和网络要求生成或修改 EasyEDA PCB 线宽、间距、网络类和差分规则。",
+      "sources": [
+        "eext-design-rule-generator",
+        "eext-diff-pair-assistant"
+      ],
+      "classes": [
+        "PCB_Drc",
+        "PCB_Layer"
+      ],
+      "inputs": [
+        "板材、板厚、铜厚和叠层",
+        "电流、阻抗和目标工艺",
+        "要修改的网络范围"
+      ],
+      "steps": [
+        "读取现有规则和网络类，保存可恢复副本",
+        "核对叠层与计算模型适用范围，不套用未知材料",
+        "形成针对目标网络的规则变更",
+        "应用后回读规则、差分对与网络类",
+        "检查失败则恢复或报告未确定状态，不继续布线"
+      ],
+      "checks": [
+        "规则数值和单位与输入匹配",
+        "未覆盖无关用户规则",
+        "差分正负网络确实存在"
+      ],
+      "pitfalls": [
+        "模型拟合不替代板厂工艺确认",
+        "仅保存配置不代表实际网络已使用该规则"
+      ],
+      "example": "为 1A 电源和普通信号分别配置 PCB 规则。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-drc-dfm",
+      "description": "检查原理图、PCB DRC 与嘉立创制造约束，区分完整通过、部分检查和执行失败。",
+      "sources": [
+        "eext-jlc-order-dfm-checker",
+        "eext-signal-absence-detection"
+      ],
+      "classes": [
+        "SCH_Drc",
+        "PCB_Drc"
+      ],
+      "inputs": [
+        "检查的板卡与图页",
+        "目标工艺和材料",
+        "只读或允许修复的范围"
+      ],
+      "steps": [
+        "等待目标文档计算稳定后运行相应 DRC",
+        "获取详细违规并关联位号、网络和坐标",
+        "按实际工艺运行可用 DFM 扩展或明确缺失项",
+        "检查项异常时标记 partial 或 failed，保留未检查项",
+        "修复后只复查受影响范围，最终读取完整结果"
+      ],
+      "checks": [
+        "检查范围与当前工程一致",
+        "未检查项目未被当成通过",
+        "检查报告可定位具体对象"
+      ],
+      "pitfalls": [
+        "上游 DFM 集合可能捕获异常后返回部分结果",
+        "零 DRC 不证明电路功能或板厂最终审单通过"
+      ],
+      "example": "只读检查当前 PCB，列出阻碍制造的项目。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-simulation",
+      "description": "对 EasyEDA 原理图使用已有 NGspice、LTspice、SimulIDE 或 CircuitJS 集成做明确目标的电路仿真。",
+      "sources": [
+        "easyeda-simulation-engine",
+        "eext-simulation-with-ngspice",
+        "eext-simulation-with-ltspice",
+        "eext-simulation-with-simulide",
+        "eext-circuitjs1-simulator",
+        "circuitjs1-easyeda"
+      ],
+      "classes": [
+        "SCH_SimulationEngine",
+        "LIB_SimulationModel"
+      ],
+      "inputs": [
+        "电路与仿真模型",
+        "分析类型、激励和指标",
+        "已安装仿真引擎"
+      ],
+      "steps": [
+        "核对模型、引脚映射、供电和地参考",
+        "按目标选择已有引擎并查询扩展上层接口",
+        "设置 DC、AC 或瞬态等参数",
+        "执行后读取引擎状态、收敛问题与波形",
+        "对目标指标计算结果，并说明模型边界"
+      ],
+      "checks": [
+        "没有把启动引擎当成仿真完成",
+        "曲线单位、时间和激励正确",
+        "结果对应当前电路版本"
+      ],
+      "pitfalls": [
+        "缺少模型时不能用随意占位模型宣称功能通过",
+        "电路仿真不涵盖真实 PCB 的全部寄生效应"
+      ],
+      "example": "验证 RC 滤波器截止频率并输出实际曲线。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-power-integrity",
+      "description": "通过已有 PADEN 或 KiPIDA 扩展评估 PCB 电源分配网络或直流压降，并核对提取模型。",
+      "sources": [
+        "eext-paden-integration",
+        "eext-paden-integration-wasm",
+        "eext-kipida-integration"
+      ],
+      "classes": [
+        "PCB_Layer",
+        "PCB_Net",
+        "PCB_ManufactureData"
+      ],
+      "inputs": [
+        "电源源端、负载与电流",
+        "铜厚、叠层与材料",
+        "目标压降或阻抗范围"
+      ],
+      "steps": [
+        "核对电源网络、铜皮、过孔和电源源端定义",
+        "确认已有分析扩展可用，查询实际调用接口",
+        "按负载设置求解条件并提取模型",
+        "读取求解状态、单位和最差点",
+        "结合具体位置给出可验证的修改建议"
+      ],
+      "checks": [
+        "求解模型包含实际导电路径",
+        "材料与电流假设写清",
+        "结果不外推到未建模频段"
+      ],
+      "pitfalls": [
+        "WASM 与外部后端不一定具备相同能力",
+        "DC 压降不能替代全频段电源完整性分析"
+      ],
+      "example": "检查 3.3V 电源从入口到主控的直流压降。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-timing-analysis",
+      "description": "分析 PCB 信号路径延迟、Setup/Hold 和时序余量，或在原理图中生成 WaveDrom 时序说明。",
+      "sources": [
+        "eext-timing-analysis",
+        "eext-timing-diagram-tool"
+      ],
+      "classes": [
+        "PCB_Net",
+        "PCB_Drc"
+      ],
+      "inputs": [
+        "驱动和接收器参数",
+        "实际路径与时钟条件",
+        "目标余量"
+      ],
+      "steps": [
+        "读取目标网络和真实长度",
+        "核对传播模型、单位和器件时序参数",
+        "计算约束下的路径延迟与 Setup/Hold 余量",
+        "需要说明图时根据明确时序生成 WaveDrom",
+        "检查数值与图形一致并导出用户要求的格式"
+      ],
+      "checks": [
+        "路径对应实际 PCB",
+        "未忽略器件与时钟参数",
+        "余量结论包含假设"
+      ],
+      "pitfalls": [
+        "画出时序图不是完成时序验证",
+        "缺少参数时只能报告待定不能补造数值"
+      ],
+      "example": "分析主控到外设的时钟与数据 Setup/Hold 余量。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-silkscreen-art",
+      "description": "制作 EasyEDA 文字、二维码、图片轮廓、涂鸦或彩色丝印，保持制造层与实际导电图形分离。",
+      "sources": [
+        "eext-color-silkscreen-generator",
+        "eext-graffiti-silkscreen",
+        "eext-dynamic-fill-region-for-silkscreen",
+        "eext-generate-silkscreen",
+        "eext-image-contour-to-pcb",
+        "eext-qrcode-generator",
+        "eext-excalidraw"
+      ],
+      "classes": [
+        "PCB_PrimitiveString",
+        "PCB_PrimitiveImage",
+        "PCB_PrimitivePolyline"
+      ],
+      "inputs": [
+        "图像、文字或二维码内容",
+        "目标层与物理尺寸",
+        "板厂工艺要求"
+      ],
+      "steps": [
+        "确认目标是丝印、板框还是导电铜图形",
+        "选择已有扩展或原生图元 API",
+        "按尺寸转换轮廓或文字并限制目标层",
+        "检查焊盘避让、最小线宽、裁切和可读性",
+        "保存并检查实际导出制造图层"
+      ],
+      "checks": [
+        "丝印未意外进入铜层",
+        "二维码或文字在目标尺寸可辨识",
+        "彩色丝印格式与目标工艺匹配"
+      ],
+      "pitfalls": [
+        "图片好看不证明制造后可读",
+        "轮廓提取结果可能有自交或过多节点"
+      ],
+      "example": "在底部丝印放置产品二维码和版本号。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-special-pcb",
+      "description": "生成 NFC/无线充电线圈、电热膜蛇形线路或 FPC 特殊结构，并核对电气目标和工艺限制。",
+      "sources": [
+        "eext-coil-creator",
+        "eext-pcb-heater-trace-generator",
+        "eext-fpc-workshop",
+        "eext-pad-expand-helper",
+        "eext-nc-pad-converter",
+        "eext-auto-copper-shape",
+        "eext-balance-copper"
+      ],
+      "classes": [
+        "PCB_PrimitiveLine",
+        "PCB_PrimitivePad",
+        "PCB_PrimitivePour"
+      ],
+      "inputs": [
+        "目标阻值、功率或线圈参数",
+        "区域、线宽间距与铜厚",
+        "FPC 补强和材料要求"
+      ],
+      "steps": [
+        "核对需求、公式与适用材料",
+        "检查现有扩展参数和结果格式",
+        "在指定区域生成图形并保留原设计",
+        "回读几何和网络连接，计算目标量",
+        "检查 DRC 与制造参数后报告偏差"
+      ],
+      "checks": [
+        "电气参数与实际几何一致",
+        "区域与禁布要求保留",
+        "补强、阻焊与铜层区别明确"
+      ],
+      "pitfalls": [
+        "平衡铜图案不能与信号网络意外相连",
+        "估算电流或温升不能当作实物温度验证"
+      ],
+      "example": "在指定区域生成目标阻值的 PCB 电热膜线路。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-manufacturing-export",
+      "description": "从已核对的 EasyEDA PCB 导出 Gerber、钻孔、BOM、贴片坐标或 STEP，并检查制造包完整性。",
+      "sources": [
+        "easyeda-client-cli",
+        "eext-batch-data-export",
+        "eext-export-gencad",
+        "eext-export-hyperlynx",
+        "eext-export-pcb-to-svg",
+        "eext-gerber-viewer",
+        "eext-gencad-viewer",
+        "online-gencad-viewer",
+        "easyeda-viewer"
+      ],
+      "classes": [
+        "PCB_ManufactureData",
+        "SYS_FileSystem"
+      ],
+      "inputs": [
+        "目标 PCB 和输出目录",
+        "制板或贴片所需格式",
+        "单位、层及钻孔选项"
+      ],
+      "steps": [
+        "确认目标板及当前保存状态，不静默保存未授权修改",
+        "查询 getGerberFile、getBomFile、getPickAndPlaceFile 等当前签名",
+        "分别生成请求的文件，拒绝 undefined 或空结果",
+        "写入授权输出位置并检查实际文件与压缩包",
+        "预览层、钻孔、板框和坐标，报告遗漏"
+      ],
+      "checks": [
+        "铜层、板框和钻孔完整",
+        "BOM 位号与贴片坐标一致",
+        "文件可以重新读取和预览"
+      ],
+      "pitfalls": [
+        "JSON-RPC 成功不代表 File 对象有效",
+        "自定义 objects/layers 可能误删必要制造数据"
+      ],
+      "example": "导出当前板的 Gerber、钻孔、BOM 和贴片坐标到新目录。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-bom-assembly",
+      "description": "比较或导出 EasyEDA BOM，使用交互式 BOM 核对装配位号、封装和贴片坐标。",
+      "sources": [
+        "eext-bom-compare",
+        "eext-interactive-bom",
+        "eext-interactive-html-bom",
+        "eext-component-box",
+        "eext-pcb-price-calculator"
+      ],
+      "classes": [
+        "PCB_ManufactureData",
+        "SCH_ManufactureData"
+      ],
+      "inputs": [
+        "装配版本与 DNP 规则",
+        "BOM 或对比文件",
+        "贴片坐标的单位和原点要求"
+      ],
+      "steps": [
+        "识别表格列、位号展开、数量和装配变体",
+        "导出或读取 BOM 并核对库器件属性",
+        "对比版本差异，区分新增、删除、替代和参数变化",
+        "按需生成交互式 BOM 或贴片坐标",
+        "核对位号、封装、数量、面与旋转"
+      ],
+      "checks": [
+        "BOM 数量可追溯到实际器件",
+        "DNP 与变体正确过滤",
+        "坐标原点、镜像及底面旋转明确"
+      ],
+      "pitfalls": [
+        "不同表格分隔符不可按扩展名猜测",
+        "交互式预览不能代替贴片厂坐标规范",
+        "自定义 PCB 价格模型不是板厂实时正式报价"
+      ],
+      "example": "比较两版 BOM，列出型号和装配数量变化。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-cad-integration",
+      "description": "将 EasyEDA PCB 与 FreeCAD、SolidWorks、Fusion 360 对接，导入 DWG 或使用 Blender 渲染板卡。",
+      "sources": [
+        "eext-mcad-integration-with-freecad",
+        "eext-mcad-integration-with-solidworks",
+        "mcad-integration-with-fusion360",
+        "eext-pcb-render-with-blender",
+        "eext-dwg-importer"
+      ],
+      "classes": [
+        "PCB_ManufactureData",
+        "PCB_Document"
+      ],
+      "inputs": [
+        "目标 CAD 软件和已有桥接",
+        "工程与输出模型",
+        "坐标原点、单位和同步范围"
+      ],
+      "steps": [
+        "确认目标应用和插件实际已安装",
+        "导出或读取 STEP/板框及相关模型",
+        "按目标集成交换并核对方向、原点与尺寸",
+        "双向修改仅限用户指定结构，检查返回差异",
+        "重新打开模型并检查孔位、板厚、器件高度或渲染结果"
+      ],
+      "checks": [
+        "机械尺寸与 PCB 对应",
+        "模型缺失被明确报告",
+        "导回修改没有覆盖电气设计"
+      ],
+      "pitfalls": [
+        "PCB 渲染不证明机械装配无碰撞",
+        "双向同步可能改变板框，不能作为纯只读动作"
+      ],
+      "example": "把当前 PCB 导入 FreeCAD，核对安装孔与外壳。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-project-migration",
+      "description": "将 KiCad 或旧版 EasyEDA 工程转换到目标专业版格式，核对器件、网络、层与几何的迁移损失。",
+      "sources": [
+        "kicad-to-easyeda-eprj3",
+        "easyeda-file-format-v2",
+        "easyeda-std-file-format",
+        "easyeda-eprj3-format"
+      ],
+      "classes": [
+        "SYS_FormatConversion",
+        "DMT_Project"
+      ],
+      "inputs": [
+        "源工程与目标版本",
+        "新目录",
+        "允许的格式损失"
+      ],
+      "steps": [
+        "识别真实源格式和对应转换器",
+        "保留源工程，在新位置转换",
+        "比较器件、封装、网络、层、板框和规则",
+        "在目标客户端打开并运行相关检查",
+        "报告不支持项和人工修复范围"
+      ],
+      "checks": [
+        "源工程受到保护",
+        "关键对象与连接数量可比较",
+        "目标客户端可继续编辑"
+      ],
+      "pitfalls": [
+        "格式可解析不等于行为和规则等价",
+        "不能用 .eprj3 操作脚本处理旧 SQLite .eprj2"
+      ],
+      "example": "将这份 KiCad 工程转换为新的嘉立创工程并报告损失。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-project-backup",
+      "description": "备份、批量归档或导出 EasyEDA 工程与库，明确目录范围并验证可重新打开。",
+      "sources": [
+        "eext-export-design-archive",
+        "eext-batch-data-export",
+        "eext-plm-integration-demo",
+        "easyeda-viewer"
+      ],
+      "classes": [
+        "DMT_Project",
+        "SYS_FileSystem"
+      ],
+      "inputs": [
+        "指定工程或库",
+        "备份目录与格式",
+        "版本和是否允许保存当前修改"
+      ],
+      "steps": [
+        "列明需要备份的具体工程与库，不默认全量",
+        "检查保存状态，遵循授权决定是否保存",
+        "使用原生导出或已安装归档扩展",
+        "检查文件数量、非空内容和压缩包条目",
+        "在可行时以独立会话重新打开备份，不覆盖源工程"
+      ],
+      "checks": [
+        "备份包含预期工程和库",
+        "目标文件可读取",
+        "只读归档与写回 PLM 分别授权"
+      ],
+      "pitfalls": [
+        "PLM 演示不意味着已对接真实业务系统",
+        "压缩包存在不代表库引用和工程完整"
+      ],
+      "example": "备份指定工程及其库到新的归档目录。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-end-to-end",
+      "description": "协调 EasyEDA 原理图设计、PCB 布局布线、DRC/DFM 和制造导出的完整流程，逐阶段验证实际产物。",
+      "sources": [
+        "easyeda-client-cli",
+        "eext-ai-reuse-block-placement",
+        "eext-design-rule-generator",
+        "eext-jlc-order-dfm-checker"
+      ],
+      "classes": [
+        "DMT_Project",
+        "SCH_Drc",
+        "PCB_Document",
+        "PCB_Drc",
+        "PCB_ManufactureData"
+      ],
+      "inputs": [
+        "明确功能和接口",
+        "板框、叠层及制造工艺",
+        "输出目录与修改范围"
+      ],
+      "steps": [
+        "把需求落实为器件、连接和机械约束",
+        "生成原理图并对比实际网表；存在歧义先解决",
+        "同步 PCB，按固定位置、禁布区和关键回路布局",
+        "应用规则、布线、检查实际失败网络和 DRC/DFM",
+        "保存授权工程并重新打开，检查制造文件完整性"
+      ],
+      "checks": [
+        "每一阶段使用当前版本的实际结果",
+        "失败或部分检查不被下游导出掩盖",
+        "可编辑工程和制造包对应同一设计"
+      ],
+      "pitfalls": [
+        "不要让 AI 凭外观判断电路正确",
+        "高级高速、射频或电源设计需要专项验证，不能以通用布线替代"
+      ],
+      "example": "从明确的传感器板需求开始，交付可编辑工程和制造文件。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-datasheet-analysis",
+      "description": "从器件数据手册提取引脚、电源、封装尺寸和参考电路，供 EasyEDA 选型、建库或设计验证。",
+      "sources": [
+        "eext-datasheet-helper",
+        "eext-ai-library-builder"
+      ],
+      "classes": [
+        "LIB_Device",
+        "LIB_Symbol",
+        "LIB_Footprint"
+      ],
+      "inputs": [
+        "数据手册文件及器件完整型号",
+        "需要提取的参数",
+        "允许使用的本地识别工具"
+      ],
+      "steps": [
+        "核对文档版本、型号后缀和封装变体",
+        "提取引脚表、电气额定值与机械尺寸",
+        "对图片或 OCR 结果回看原表格和图例",
+        "形成可用于器件或电路的结构化结果",
+        "对不清晰的符号和尺寸标明待核实"
+      ],
+      "checks": [
+        "每个关键参数带页码或章节来源",
+        "单位与典型值、最大值区分",
+        "引脚方向与底视/顶视核对"
+      ],
+      "pitfalls": [
+        "VLM 识别可能误读小数、极性和引脚号",
+        "未经授权不把保密数据手册发送给外部服务"
+      ],
+      "example": "从这份数据手册提取引脚和推荐供电电路。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-knowledge-base",
+      "description": "在已有 EasyEDA 本地 RAG 知识库中检索设计资料，检查引用来源与更新范围。",
+      "sources": [
+        "eext-knowledge-base"
+      ],
+      "classes": [
+        "SYS_ExternalApi"
+      ],
+      "inputs": [
+        "查询问题或指定资料",
+        "已有知识库与模型",
+        "是否允许新增索引"
+      ],
+      "steps": [
+        "确认扩展、模型和索引是否实际可用",
+        "默认先检索已有资料",
+        "读取命中文段的文件、位置和版本",
+        "用原文复核关键结论并指出冲突",
+        "新增资料或重建索引只在用户要求范围内进行"
+      ],
+      "checks": [
+        "回答能追溯到实际命中文段",
+        "缺失信息不由模型补造",
+        "本地检索与外发数据区分"
+      ],
+      "pitfalls": [
+        "Embedding 相似度不证明技术结论正确",
+        "已有知识库不一定覆盖当前器件版本"
+      ],
+      "example": "从本地知识库找出这个电源模块的设计依据。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-documentation",
+      "description": "根据实际 EasyEDA 工程生成设计说明、统计报告、Markdown/LaTeX 注释或 PLM 对接资料。",
+      "sources": [
+        "eext-docs-generator",
+        "eext-note-tools",
+        "eext-export-design-report",
+        "eext-plm-integration-demo"
+      ],
+      "classes": [
+        "DMT_Project",
+        "SCH_Netlist",
+        "PCB_ManufactureData"
+      ],
+      "inputs": [
+        "目标读者和格式",
+        "工程范围",
+        "允许导出的信息"
+      ],
+      "steps": [
+        "读取工程、BOM、网络和必要统计",
+        "区分实测数据、计算结果与未验证设计说明",
+        "按用户需要生成文档、公式或报告",
+        "核对文档中的位号、网络、版本和输出文件",
+        "外发或写入 PLM 只在明确授权后进行"
+      ],
+      "checks": [
+        "统计来自实际工程",
+        "生成文字不冒充测试报告",
+        "文档链接指向有效交付文件"
+      ],
+      "pitfalls": [
+        "通用 LLM 生成说明可能包含不存在的功能",
+        "报告中的网络长度不能自动当作时序结论"
+      ],
+      "example": "为当前板卡生成含 BOM、接口和供电说明的设计文档。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    },
+    {
+      "name": "easyeda-extension-use",
+      "description": "通过嘉立创 EDA 内置 MCP 调用 EasyEDA MCP 的 .eext 领域接口，发现能力、只读检查工程，并按授权设计、布线和导出。",
+      "sources": [
+        "extension-dev-skill",
+        "easyeda-client-cli"
+      ],
+      "classes": [
+        "SYS_ExternalApi",
+        "SYS_Help"
+      ],
+      "inputs": [
+        "目标会话及已安装的 easyeda-mcp 扩展",
+        "目标工程和活动文档的真实 UUID",
+        "只读、工程修改或输出文件的授权范围"
+      ],
+      "steps": [
+        "先确认 functions 中 easyeda-mcp 已启用，不把 Agent 插件安装视为 .eext 已安装",
+        "先查询 doc.external 的 easyedaMcp 组；BRIDGE_NOT_READY 时通过 invoke 调用 eda.sys_Help.help(\"external\",\"easyedaMcp\")",
+        "用 invoke 调用 external.easyedaMcp.getCapabilities({}) 和 inspectProject({})，逐层检查返回值",
+        "no_project 表示没有工程，project_only 表示工程已打开但没有活动图页；修改需要明确 projectUuid 和 documentUuid",
+        "根据任务调用已发现的领域接口；修改模式由用户在 EDA 确认，参数不能开启权限",
+        "用器件、引脚、网表和 DRC 回读；导出检查真实文件，超时后先核对已发生的变化"
+      ],
+      "checks": [
+        "已确认内部扩展 UUID、版本、启用状态与接口目录",
+        "只读任务没有调用工程修改、保存或制造导出",
+        "工程、文档、对象和实际输出分别验证"
+      ],
+      "pitfalls": [
+        "doc.external 在某些主页 render 不可用，不能据此认为实际 external 接口断开",
+        "原理图坐标为 10mil、PCB 为 mil，创建返回值不等于电气或制造通过",
+        "filesystem 需要客户端外部交互权限；保存窗口取消不能报告为落盘成功"
+      ],
+      "example": "使用已安装的 EasyEDA MCP 扩展，只读检查当前工程和原理图器件。",
+      "origin": "extension-derived",
+      "upstreamSkill": null
+    }
+  ]
+}

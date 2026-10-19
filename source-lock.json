@@ -1,0 +1,3779 @@
+{
+  "schemaVersion": 1,
+  "retrievedAt": "2026-10-19T02:02:37.476958+00:00",
+  "repositoryCount": 97,
+  "records": [
+    {
+      "repository": "circuitjs1-easyeda",
+      "revision": "8db75067d81cfcac180edff910716927f89760df",
+      "url": "https://github.com/easyeda/circuitjs1-easyeda",
+      "license": "GPL-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": true,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "bbd8246acfa67185d6a5f63e4c9da9852d8d73439d89b850be03a079595ee182",
+          "bytes": 14309,
+          "url": "https://github.com/easyeda/circuitjs1-easyeda/blob/8db75067d81cfcac180edff910716927f89760df/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-simulation"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "easyeda-api-i18n",
+      "revision": "087ac9802636c02539426e5ae5465de69edfff7f",
+      "url": "https://github.com/easyeda/easyeda-api-i18n",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "7b10badae7e43c0edb1afd3e9616326bee075992a45fb6ab284f6a65fab99e7c",
+          "bytes": 3855,
+          "url": "https://github.com/easyeda/easyeda-api-i18n/blob/087ac9802636c02539426e5ae5465de69edfff7f/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-api"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "easyeda-api-sdk",
+      "revision": "f83525eb54f86f131cf90780ed3fa0237dbb75aa",
+      "url": "https://github.com/easyeda/easyeda-api-sdk",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "e062a0d504f2cf49c48c45e680e775e6a117df5f9a0796e388d1aa6ab219bb26",
+          "bytes": 4008,
+          "url": "https://github.com/easyeda/easyeda-api-sdk/blob/f83525eb54f86f131cf90780ed3fa0237dbb75aa/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-extension-development"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "easyeda-api-skill",
+      "revision": "d5a0b1c68304ec60fc9387570ffb912764f937b1",
+      "url": "https://github.com/easyeda/easyeda-api-skill",
+      "license": null,
+      "licenseEvidence": [
+        "SKILL.md frontmatter: MIT"
+      ],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "aa2edd1de828a01a02d1bd3a6029f9ac3329811ce12827a6d6144602886672df",
+          "bytes": 4807,
+          "url": "https://github.com/easyeda/easyeda-api-skill/blob/d5a0b1c68304ec60fc9387570ffb912764f937b1/README.md"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "f5a3376eacb0d2bc2f3ebfbf110f6b1e72e9d53f01653c1a11f51539063a1e59",
+          "bytes": 31547,
+          "url": "https://github.com/easyeda/easyeda-api-skill/blob/d5a0b1c68304ec60fc9387570ffb912764f937b1/SKILL.md"
+        }
+      ],
+      "observedApiMounts": [
+        "dmt_Board",
+        "dmt_EditorControl",
+        "dmt_Folder",
+        "dmt_Project",
+        "dmt_Schematic",
+        "dmt_SelectControl",
+        "dmt_Team",
+        "lib_Device",
+        "lib_LibrariesList",
+        "lib_Symbol",
+        "pcb_Drc",
+        "pcb_Primitive",
+        "pcb_PrimitiveComponent",
+        "pcb_PrimitiveLine",
+        "pcb_PrimitiveVia",
+        "pcb_SelectControl",
+        "sch_PrimitiveComponent",
+        "sch_SelectControl",
+        "sys_",
+        "sys_Dialog",
+        "sys_FileSystem",
+        "sys_IFrame",
+        "sys_Message",
+        "sys_Storage",
+        "sys_Window",
+        "xxx"
+      ],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-use",
+        "easyeda-mcp-setup",
+        "easyeda-api"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "easyeda-client-cli",
+      "revision": "eba951a2c08b7872271b20b463dc7fe1cc5f231d",
+      "url": "https://github.com/easyeda/easyeda-client-cli",
+      "license": null,
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "289f5d517dcf6f6e5c37c779b798d7a4f29c48fff4e995c83125d7d57bac15d8",
+          "bytes": 5515,
+          "url": "https://github.com/easyeda/easyeda-client-cli/blob/eba951a2c08b7872271b20b463dc7fe1cc5f231d/README.md"
+        },
+        {
+          "path": "cli-for-ai.md",
+          "sha256": "7e4900aa32fe087aa6ddefc5c6e64ef9a03a0ec0c35f2d35b117b3eee1b41beb",
+          "bytes": 56317,
+          "url": "https://github.com/easyeda/easyeda-client-cli/blob/eba951a2c08b7872271b20b463dc7fe1cc5f231d/cli-for-ai.md"
+        }
+      ],
+      "observedApiMounts": [
+        "dmt_EditorControl",
+        "dmt_Project",
+        "lib_Device",
+        "lib_LibrariesList",
+        "pcb_Document",
+        "pcb_Drc",
+        "pcb_ManufactureData",
+        "pcb_MathPolygon",
+        "pcb_PrimitivePolyline",
+        "sch_Document",
+        "sch_Drc",
+        "sch_ManufactureData",
+        "sch_PrimitiveComponent",
+        "sch_PrimitiveWire",
+        "sys_Environment",
+        "sys_FileSystem",
+        "sys_Message"
+      ],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-use",
+        "easyeda-mcp-setup",
+        "easyeda-api",
+        "easyeda-eprj3",
+        "easyeda-pcb-layout",
+        "easyeda-pcb-routing",
+        "easyeda-manufacturing-export",
+        "easyeda-end-to-end",
+        "easyeda-extension-use"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "easyeda-documents",
+      "revision": "c5637b5f1fa0df90628032ac8ec3150a1e76d58b",
+      "url": "https://github.com/easyeda/easyeda-documents",
+      "license": null,
+      "licenseEvidence": [],
+      "archived": true,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "bcece010b42885ad9534aacf12460947ba0921d6a1eae2dae57e77e2c1324b60",
+          "bytes": 1168,
+          "url": "https://github.com/easyeda/easyeda-documents/blob/c5637b5f1fa0df90628032ac8ec3150a1e76d58b/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [],
+      "disposition": "archived-reference"
+    },
+    {
+      "repository": "easyeda-enhanced-schematic-skill",
+      "revision": "0c4b9a0ad94d532923dee5c828a6efa7444f4506",
+      "url": "https://github.com/easyeda/easyeda-enhanced-schematic-skill",
+      "license": null,
+      "licenseEvidence": [
+        "SKILL.md frontmatter: MIT"
+      ],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "f216c67cf2e8b641939f5afb6f864c500f1ed9ad596f40463124f23a55ce017c",
+          "bytes": 1530,
+          "url": "https://github.com/easyeda/easyeda-enhanced-schematic-skill/blob/0c4b9a0ad94d532923dee5c828a6efa7444f4506/README.md"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "7bf52efe3f0cb22af46b293dce9830860b68a6e4ee71fbf327115528bdfee84d",
+          "bytes": 14663,
+          "url": "https://github.com/easyeda/easyeda-enhanced-schematic-skill/blob/0c4b9a0ad94d532923dee5c828a6efa7444f4506/SKILL.md"
+        }
+      ],
+      "observedApiMounts": [
+        "lib_Device",
+        "sch_PrimitiveComponent",
+        "sch_PrimitiveRectangle",
+        "sch_PrimitiveText",
+        "sch_PrimitiveWire"
+      ],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-schematic-net-fanout"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "easyeda-eprj3-format",
+      "revision": "3adee06f510b2d5181b80ff850c40b0bccbf75f0",
+      "url": "https://github.com/easyeda/easyeda-eprj3-format",
+      "license": null,
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "3757743e0eabd0631e6bae31d502ca87fbf25f47f8a189ca92f8fd8bf53f8c1d",
+          "bytes": 11658,
+          "url": "https://github.com/easyeda/easyeda-eprj3-format/blob/3adee06f510b2d5181b80ff850c40b0bccbf75f0/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-eprj3",
+        "easyeda-project-migration"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "easyeda-eprj3-skill",
+      "revision": "40c94e129df18e94232f8c94260134bfcac6cabf",
+      "url": "https://github.com/easyeda/easyeda-eprj3-skill",
+      "license": "MIT",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "ed795ebc4f310ebb159d5405770990f8e2b28803912807bd7f76ad7f61fd1bf9",
+          "bytes": 3513,
+          "url": "https://github.com/easyeda/easyeda-eprj3-skill/blob/40c94e129df18e94232f8c94260134bfcac6cabf/README.md"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "5781823b058cb36d24403924aa2ab725dc52a7f02c10ac1e86cd0854953aa544",
+          "bytes": 22094,
+          "url": "https://github.com/easyeda/easyeda-eprj3-skill/blob/40c94e129df18e94232f8c94260134bfcac6cabf/SKILL.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-eprj3"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "easyeda-file-format",
+      "revision": "9186c4ac43e67d1bb111ada3f5cc020b76bc543a",
+      "url": "https://github.com/easyeda/easyeda-file-format",
+      "license": null,
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "4bb45d08403096322faa62a379fcf0f5eb165c3e29a1770f611fecb89b73fb09",
+          "bytes": 14384,
+          "url": "https://github.com/easyeda/easyeda-file-format/blob/9186c4ac43e67d1bb111ada3f5cc020b76bc543a/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-format-skill"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "easyeda-file-format-v2",
+      "revision": "63f38c2758cbe2456e8b5c7e76469369430d94af",
+      "url": "https://github.com/easyeda/easyeda-file-format-v2",
+      "license": null,
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "0cbbc8d422b8700b3884e0e9cfcbc6dac205af7d5e5617af90d4b25d0560f7f2",
+          "bytes": 3155,
+          "url": "https://github.com/easyeda/easyeda-file-format-v2/blob/63f38c2758cbe2456e8b5c7e76469369430d94af/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-format-skill",
+        "easyeda-project-migration"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "easyeda-format-skill",
+      "revision": "9e42727cc4cf13a8e442140e8e7794ae94d5f41b",
+      "url": "https://github.com/easyeda/easyeda-format-skill",
+      "license": "MIT",
+      "licenseEvidence": [
+        "SKILL.md frontmatter: MIT"
+      ],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "77f9c1536ec155ee43ef93e9a9fdc98c615eec6f27b6bf0c51afbdb7fc36387e",
+          "bytes": 12132,
+          "url": "https://github.com/easyeda/easyeda-format-skill/blob/9e42727cc4cf13a8e442140e8e7794ae94d5f41b/README.md"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "6b9f8f0b67a788c76d53e5db0c7e4f4daf076352f9561a826b8ab3c71c6dbdde",
+          "bytes": 19505,
+          "url": "https://github.com/easyeda/easyeda-format-skill/blob/9e42727cc4cf13a8e442140e8e7794ae94d5f41b/SKILL.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-format-skill"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "easyeda-netlist-format",
+      "revision": "4e3997215e3241ba75d7287fbd4743231e32f7a6",
+      "url": "https://github.com/easyeda/easyeda-netlist-format",
+      "license": null,
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "960dbc00a0ba2c193b2df80c4944fe679911ab7829f2d4780809918abddf580b",
+          "bytes": 2352,
+          "url": "https://github.com/easyeda/easyeda-netlist-format/blob/4e3997215e3241ba75d7287fbd4743231e32f7a6/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-netlist-import",
+        "easyeda-netlist-review"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "easyeda-pcb-router",
+      "revision": "caa8137a851376d113971a1fee8fe22d40b2ba31",
+      "url": "https://github.com/easyeda/easyeda-pcb-router",
+      "license": "GPL-3.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "493a612471baff9375afb7480ffdef9810b00233aab5c5064f4a1632f665f22c",
+          "bytes": 8753,
+          "url": "https://github.com/easyeda/easyeda-pcb-router/blob/caa8137a851376d113971a1fee8fe22d40b2ba31/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-pcb-routing",
+        "easyeda-freerouting"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "easyeda-simulation-engine",
+      "revision": "f06a1dd20b60ea37284ab8033269ddf1212f31af",
+      "url": "https://github.com/easyeda/easyeda-simulation-engine",
+      "license": "AGPL-3.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "3545f641b79ae18cc8a88e06341f5c3f8e6b786f37a5c0fe480451242fb93160",
+          "bytes": 4081,
+          "url": "https://github.com/easyeda/easyeda-simulation-engine/blob/f06a1dd20b60ea37284ab8033269ddf1212f31af/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-simulation"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "easyeda-std-file-format",
+      "revision": "8cbccfdd86b82100036044940f142ab85972699c",
+      "url": "https://github.com/easyeda/easyeda-std-file-format",
+      "license": null,
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "7ebb6793e39821f8920cbb38cd6a347e3087c320fe6c741884d298151021cef2",
+          "bytes": 202,
+          "url": "https://github.com/easyeda/easyeda-std-file-format/blob/8cbccfdd86b82100036044940f142ab85972699c/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-project-migration"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "easyeda-std-i18n",
+      "revision": "407b619c72d686bdd2988ba13a7dd1b3948176d9",
+      "url": "https://github.com/easyeda/easyeda-std-i18n",
+      "license": null,
+      "licenseEvidence": [],
+      "archived": true,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "56e5d5bd6521ce1a73ca3b783cb5702bedbc2bc6443b6eb59bee2ee50583c7da",
+          "bytes": 7960,
+          "url": "https://github.com/easyeda/easyeda-std-i18n/blob/407b619c72d686bdd2988ba13a7dd1b3948176d9/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [],
+      "disposition": "archived-reference"
+    },
+    {
+      "repository": "easyeda-viewer",
+      "revision": "d2e1a71676a19780189d2fc99c6153de1f8f8f6a",
+      "url": "https://github.com/easyeda/easyeda-viewer",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "1bcf83aa4bfea8628f8180119604911e1a56c219c6f703660966d0bf31468aef",
+          "bytes": 11240,
+          "url": "https://github.com/easyeda/easyeda-viewer/blob/d2e1a71676a19780189d2fc99c6153de1f8f8f6a/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-manufacturing-export",
+        "easyeda-project-backup"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-ai-device-standardization",
+      "revision": "89abac48075bd4e0ebc2a30bee55939251f8660f",
+      "url": "https://github.com/easyeda/eext-ai-device-standardization",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "12c23866654204f5d3acb6416884e4258c9cc9b0a4f85eb7860739f02882ac07",
+          "bytes": 1878,
+          "url": "https://github.com/easyeda/eext-ai-device-standardization/blob/89abac48075bd4e0ebc2a30bee55939251f8660f/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "f7d32fc4c0f2318a6fd7899cc0b3b205f57501a9ef4646fcb14acbdfcca862cc",
+          "bytes": 1391,
+          "url": "https://github.com/easyeda/eext-ai-device-standardization/blob/89abac48075bd4e0ebc2a30bee55939251f8660f/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "dmt_SelectControl",
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "activate",
+        "openBomMatcher"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-component-library"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-ai-library-builder",
+      "revision": "27731deb50a3ca855874d5b70c32c5e2dc6888e0",
+      "url": "https://github.com/easyeda/eext-ai-library-builder",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "44cb543939214e43480af5d53f24e190dd5457511b95a308faff69d762018844",
+          "bytes": 3740,
+          "url": "https://github.com/easyeda/eext-ai-library-builder/blob/27731deb50a3ca855874d5b70c32c5e2dc6888e0/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "be106600705e1af427a6a155e2574ecab1de4c4002e1a48a7d078ec9120ea752",
+          "bytes": 1207,
+          "url": "https://github.com/easyeda/eext-ai-library-builder/blob/27731deb50a3ca855874d5b70c32c5e2dc6888e0/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "footprint",
+        "footprintShow",
+        "symbol",
+        "symbolShow"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-component-library",
+        "easyeda-datasheet-analysis"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-ai-reuse-block-placement",
+      "revision": "0a1b7536e9528b9e268861add2623eb7e33e47c3",
+      "url": "https://github.com/easyeda/eext-ai-reuse-block-placement",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "89efa4ce66e36f24ff58c7e0cce4b9fe66d068807ddc57b4ad755acf6f2002bd",
+          "bytes": 3105,
+          "url": "https://github.com/easyeda/eext-ai-reuse-block-placement/blob/0a1b7536e9528b9e268861add2623eb7e33e47c3/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "78e96891da06f9eb7062a98eb45425d3ddac4cdc0e49f5873071a1702eaf1289",
+          "bytes": 8235,
+          "url": "https://github.com/easyeda/eext-ai-reuse-block-placement/blob/0a1b7536e9528b9e268861add2623eb7e33e47c3/src/index.ts"
+        },
+        {
+          "path": "src/agent/tools.ts",
+          "sha256": "d49d76e52aa096c04bd3533eb54efd88b16e26d20c933e748983f6a6e42992c8",
+          "bytes": 16945,
+          "url": "https://github.com/easyeda/eext-ai-reuse-block-placement/blob/0a1b7536e9528b9e268861add2623eb7e33e47c3/src/agent/tools.ts"
+        },
+        {
+          "path": "src/cbb.ts",
+          "sha256": "79cdb3d6f66fd213d035d69007cc16f8332b428c3f24d44c5eca7e9b2530b6d7",
+          "bytes": 67552,
+          "url": "https://github.com/easyeda/eext-ai-reuse-block-placement/blob/0a1b7536e9528b9e268861add2623eb7e33e47c3/src/cbb.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_I18n",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "activate",
+        "activateSchematicPage",
+        "boxWithMargin",
+        "cacheGeometry",
+        "collectPageObstacles",
+        "composeSystemPrompt",
+        "deactivate",
+        "estimateGeometry",
+        "getCurrentDocState",
+        "loadGeometry",
+        "modifyCbbModule",
+        "openCopilot",
+        "parsePlaceTarget",
+        "placeCbbModule",
+        "placeCbbPage",
+        "planAlignedPlacement",
+        "premeasureGeometry",
+        "readCbbSchematicSummary",
+        "toolsAnthropic",
+        "toolsOpenAiChat",
+        "toolsOpenAiResponses"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-schematic-design",
+        "easyeda-module-reuse",
+        "easyeda-end-to-end"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-ai-symbol-builder",
+      "revision": "e9fb3b167356c85077307712f09e3133bd632585",
+      "url": "https://github.com/easyeda/eext-ai-symbol-builder",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "e707c2bbb27e550fb40728bda651f672d1d17433cac278b65d1d85974f5b9c89",
+          "bytes": 1920,
+          "url": "https://github.com/easyeda/eext-ai-symbol-builder/blob/e9fb3b167356c85077307712f09e3133bd632585/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "a4e5f41ed87854ce1245f0d54ffad880061e001fb35f4da81ffa46486e5eb3ec",
+          "bytes": 1085,
+          "url": "https://github.com/easyeda/eext-ai-symbol-builder/blob/e9fb3b167356c85077307712f09e3133bd632585/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "hideIframe",
+        "openIframe",
+        "showIframe"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-component-library"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-api-debug-tool",
+      "revision": "e7bf7376bcac92879f5eb2414ceef7fb7078b586",
+      "url": "https://github.com/easyeda/eext-api-debug-tool",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "79afeab7cd43ded0056089e4602ba787ea8e3a87d7306bde46d08acc5c53ad0e",
+          "bytes": 6777,
+          "url": "https://github.com/easyeda/eext-api-debug-tool/blob/e7bf7376bcac92879f5eb2414ceef7fb7078b586/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b37ed4e28bd1156b6b9a2545317bddaa4f72dd93dddb743dd5febdf59a4d16c2",
+          "bytes": 3642,
+          "url": "https://github.com/easyeda/eext-api-debug-tool/blob/e7bf7376bcac92879f5eb2414ceef7fb7078b586/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "extensionUuid",
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_Storage"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "openScriptTool"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-extension-development"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-api-test-tool",
+      "revision": "317bd75e32f0248285fd9d4551e70ed046ef443f",
+      "url": "https://github.com/easyeda/eext-api-test-tool",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "15b4e264080e40231ddf18307bd23796105b7b5d3973e5cbe7caa0062bd38356",
+          "bytes": 2030,
+          "url": "https://github.com/easyeda/eext-api-test-tool/blob/317bd75e32f0248285fd9d4551e70ed046ef443f/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "5b8dc6eabb8eb79579f9243980815f053d135a265d1d6f3277f5dfcc93732449",
+          "bytes": 927,
+          "url": "https://github.com/easyeda/eext-api-test-tool/blob/317bd75e32f0248285fd9d4551e70ed046ef443f/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_MessageBox"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "iframeApiTest"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-extension-development"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-auto-copper-shape",
+      "revision": "98317b6b5941977a3ae90948a05295f9d8b1169f",
+      "url": "https://github.com/easyeda/eext-auto-copper-shape",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "865b754ff58bd0b7fdc21a7b5a55d5585f3220c96f9140783bdc4ce77a881ca6",
+          "bytes": 1392,
+          "url": "https://github.com/easyeda/eext-auto-copper-shape/blob/98317b6b5941977a3ae90948a05295f9d8b1169f/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "954b6415576d314c29dda75556e3147132ad2f86e860356a44af7b971ad800cc",
+          "bytes": 1353,
+          "url": "https://github.com/easyeda/eext-auto-copper-shape/blob/98317b6b5941977a3ae90948a05295f9d8b1169f/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "dmt_SelectControl",
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "activate",
+        "openAutoCopperShapePanel"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-special-pcb"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-balance-copper",
+      "revision": "4a52f9021a9df487c9f3d2694f1aa67ef528d5ec",
+      "url": "https://github.com/easyeda/eext-balance-copper",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "56bba9e6bc5b8c9e9963db1443ff77222dc5e5bc8f17337afa98f28dae5b3063",
+          "bytes": 2680,
+          "url": "https://github.com/easyeda/eext-balance-copper/blob/4a52f9021a9df487c9f3d2694f1aa67ef528d5ec/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "0bfacfd464dd0fa64a1057d2a45436c1bae5c70be6056a4d37ee5802f27682ff",
+          "bytes": 19827,
+          "url": "https://github.com/easyeda/eext-balance-copper/blob/4a52f9021a9df487c9f3d2694f1aa67ef528d5ec/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "dmt_SelectControl",
+        "pcb_Event",
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_Message",
+        "sys_Timer"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "openBalanceCopper"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-special-pcb"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-batch-data-export",
+      "revision": "16c0b33ca318abf162d21a287e5695ed1d8c1e73",
+      "url": "https://github.com/easyeda/eext-batch-data-export",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "bd7939d76efb5ea671ad02376b7335109a897d20662dd7bc9dcc964e096882dd",
+          "bytes": 1451,
+          "url": "https://github.com/easyeda/eext-batch-data-export/blob/16c0b33ca318abf162d21a287e5695ed1d8c1e73/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "841fb277d77296c43062b8259bf10fdefbf53ab8730bec60d2f4abbda0fbe15e",
+          "bytes": 1035,
+          "url": "https://github.com/easyeda/eext-batch-data-export/blob/16c0b33ca318abf162d21a287e5695ed1d8c1e73/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "config"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-manufacturing-export",
+        "easyeda-project-backup"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-batch-place-components",
+      "revision": "558e2530856cff42578900922ef66df4be3f7455",
+      "url": "https://github.com/easyeda/eext-batch-place-components",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "9010508a0949d552d432f5b1968922f2aa46b2ccf9d3ab3588858799aeb92b0b",
+          "bytes": 3625,
+          "url": "https://github.com/easyeda/eext-batch-place-components/blob/558e2530856cff42578900922ef66df4be3f7455/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "246a13238e81a05ad9803ce4d79fb88fccc432e1d4bba24f6fa0c436ef9564e4",
+          "bytes": 16432,
+          "url": "https://github.com/easyeda/eext-batch-place-components/blob/558e2530856cff42578900922ef66df4be3f7455/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "lib_Device",
+        "lib_Footprint",
+        "lib_LibrariesList",
+        "lib_Symbol",
+        "pcb_PrimitiveComponent",
+        "sch_PrimitiveComponent",
+        "sys_Dialog",
+        "sys_FileSystem",
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_Log",
+        "sys_Message",
+        "sys_Storage"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "batchPlaceFootprint",
+        "batchPlaceSymbol",
+        "openLibrarySelector"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-pcb-layout"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-board-outline-splitter",
+      "revision": "2f5c602391cf4b1702cd808bdeda7d1c9f8ee09c",
+      "url": "https://github.com/easyeda/eext-board-outline-splitter",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "ba02d5a803d0ea881547eadfb0fb61ffa39c570230dc285cc6c030bab46328f9",
+          "bytes": 4713,
+          "url": "https://github.com/easyeda/eext-board-outline-splitter/blob/2f5c602391cf4b1702cd808bdeda7d1c9f8ee09c/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "27efc4001525d0bd54543e665b79670fe778ca56abe8dba04ff86c80fe44d22f",
+          "bytes": 659,
+          "url": "https://github.com/easyeda/eext-board-outline-splitter/blob/2f5c602391cf4b1702cd808bdeda7d1c9f8ee09c/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "activate",
+        "splitBoardOutlinesToPcbs"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-pcb-layout"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-bom-compare",
+      "revision": "4489dd9b857e19505a2f5a0dd383342bb77923d6",
+      "url": "https://github.com/easyeda/eext-bom-compare",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "dd8bb0328e018334a6cb6d2ce9c0a2be7eb4218fd18138ef3ee964b0dc5b95d6",
+          "bytes": 9587,
+          "url": "https://github.com/easyeda/eext-bom-compare/blob/4489dd9b857e19505a2f5a0dd383342bb77923d6/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "0cb735bfe2266c4ecd242549a8518c651af39a1d700a29a09ed44bf030ce908f",
+          "bytes": 1014,
+          "url": "https://github.com/easyeda/eext-bom-compare/blob/4489dd9b857e19505a2f5a0dd383342bb77923d6/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "openBomCompare"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-bom-assembly"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-chat-with-ai-kimi",
+      "revision": "02cd68556e7a74eba645b485735d27959124128c",
+      "url": "https://github.com/easyeda/eext-chat-with-ai-kimi",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "cae101727b757c400ebb47cf8e6c7dca5dc9653eacda73d17e396a731581a48d",
+          "bytes": 2556,
+          "url": "https://github.com/easyeda/eext-chat-with-ai-kimi/blob/02cd68556e7a74eba645b485735d27959124128c/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "0d183a94748fb6be254f32981cec1d48c22cc5ba4af4ccb4b2634168d3dd7810",
+          "bytes": 564,
+          "url": "https://github.com/easyeda/eext-chat-with-ai-kimi/blob/02cd68556e7a74eba645b485735d27959124128c/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_MessageBox"
+      ],
+      "entryExports": [
+        "RunChat",
+        "about",
+        "activate"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-api"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-circuitjs1-simulator",
+      "revision": "220a62cc30a21a2c2121fb1037e9ba427e64e8d7",
+      "url": "https://github.com/easyeda/eext-circuitjs1-simulator",
+      "license": "GPL-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "65784f183404ce34e34e7d26511a42b1e8e6840077ec143810463123cdd38ac6",
+          "bytes": 924,
+          "url": "https://github.com/easyeda/eext-circuitjs1-simulator/blob/220a62cc30a21a2c2121fb1037e9ba427e64e8d7/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "fe79c3182ab18fea1b19f1819f2995ef2a74d3e86d4c7e5f4c13083853c0a60e",
+          "bytes": 690,
+          "url": "https://github.com/easyeda/eext-circuitjs1-simulator/blob/220a62cc30a21a2c2121fb1037e9ba427e64e8d7/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "openSimulator"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-simulation"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-coil-creator",
+      "revision": "3c897637a52d8f1cbc243e8587cbc5c90c5e35b1",
+      "url": "https://github.com/easyeda/eext-coil-creator",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "d79033414185ffe01a6bf35dec2450551c2753b48128f1b8ff642a9bf2fecf3f",
+          "bytes": 1496,
+          "url": "https://github.com/easyeda/eext-coil-creator/blob/3c897637a52d8f1cbc243e8587cbc5c90c5e35b1/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "601e6f057c5bdbe34705b09439c85684bfcf2cbdd06ca30a3b5911c72a70a900",
+          "bytes": 435,
+          "url": "https://github.com/easyeda/eext-coil-creator/blob/3c897637a52d8f1cbc243e8587cbc5c90c5e35b1/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_MessageBox"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "openIframe"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-special-pcb"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-color-silkscreen-generator",
+      "revision": "0d36c0495b9100a796337fd08041162a825b66b5",
+      "url": "https://github.com/easyeda/eext-color-silkscreen-generator",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "0d6d94ca681b44f1dd94adb0b691571c0e36b0b66699f6f1882f024c1e874619",
+          "bytes": 4361,
+          "url": "https://github.com/easyeda/eext-color-silkscreen-generator/blob/0d36c0495b9100a796337fd08041162a825b66b5/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "d5e79a731f2dee094998a374b3a8d28a01d7427222281e201a668077216c9892",
+          "bytes": 1374,
+          "url": "https://github.com/easyeda/eext-color-silkscreen-generator/blob/0d36c0495b9100a796337fd08041162a825b66b5/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "openGenerator"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-silkscreen-art"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-component-box",
+      "revision": "0390a4c0e9dba6643ca2d18f8ff78328548efa70",
+      "url": "https://github.com/easyeda/eext-component-box",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "c3c7c37c609a05a477f424b9663f80686f85d60b6c018cf1032eef1647db1b1b",
+          "bytes": 2057,
+          "url": "https://github.com/easyeda/eext-component-box/blob/0390a4c0e9dba6643ca2d18f8ff78328548efa70/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "c3d84c232c4d5680fa1ca093f8da4295fa6d0b0d18cd4b011b1b89d231e92e0d",
+          "bytes": 2905,
+          "url": "https://github.com/easyeda/eext-component-box/blob/0390a4c0e9dba6643ca2d18f8ff78328548efa70/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "dmt_SelectControl",
+        "pcb_SelectControl",
+        "sch_SelectControl",
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_Storage"
+      ],
+      "entryExports": [
+        "activate",
+        "connectBox",
+        "findSelectedComponent",
+        "openBox",
+        "openLibrary"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-component-library",
+        "easyeda-bom-assembly"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-datasheet-helper",
+      "revision": "6be8cf0b8e28131e011ba11bf887dab4f027bed9",
+      "url": "https://github.com/easyeda/eext-datasheet-helper",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "7277f29ec88ea29d84e582654b7f5348c1a7d317d38dabe635dfd5cb35734e49",
+          "bytes": 2454,
+          "url": "https://github.com/easyeda/eext-datasheet-helper/blob/6be8cf0b8e28131e011ba11bf887dab4f027bed9/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "3d3097759015e901382ba51721ecacf2814a07191bec89f6b3df6e5bf24af2fa",
+          "bytes": 2814,
+          "url": "https://github.com/easyeda/eext-datasheet-helper/blob/6be8cf0b8e28131e011ba11bf887dab4f027bed9/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sch_PrimitiveComponent",
+        "sch_SelectControl",
+        "sys_Dialog",
+        "sys_IFrame",
+        "sys_Storage"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "onOpenChat"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-datasheet-analysis"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-delete-all-components",
+      "revision": "51f26554422918eb94617a86b1fa6a0de82b5ec8",
+      "url": "https://github.com/easyeda/eext-delete-all-components",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "0a74c72b4d33fe13084ea48775a3af4897343c522ebb5441d8d13d8c5774d676",
+          "bytes": 864,
+          "url": "https://github.com/easyeda/eext-delete-all-components/blob/51f26554422918eb94617a86b1fa6a0de82b5ec8/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "dbbe2f157498baeb357967bfcf6b8fcd367e8a539bf76541b9ed6ad34a1d1553",
+          "bytes": 438,
+          "url": "https://github.com/easyeda/eext-delete-all-components/blob/51f26554422918eb94617a86b1fa6a0de82b5ec8/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "debug"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [],
+      "disposition": "supplementary-reference"
+    },
+    {
+      "repository": "eext-design-rule-generator",
+      "revision": "2cf9635b335bf8c15cd046a1c2cf08f8b9118f88",
+      "url": "https://github.com/easyeda/eext-design-rule-generator",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "2ae4d174e52e9b5b47f6b69bd190cd4a6168a0d092c015b312a37acefd58b63c",
+          "bytes": 2207,
+          "url": "https://github.com/easyeda/eext-design-rule-generator/blob/2cf9635b335bf8c15cd046a1c2cf08f8b9118f88/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "cda04ef3a1821d2024f28db24b9b95552c4baefc62bca0759a02b6e779b9588a",
+          "bytes": 1155,
+          "url": "https://github.com/easyeda/eext-design-rule-generator/blob/2cf9635b335bf8c15cd046a1c2cf08f8b9118f88/src/index.ts"
+        },
+        {
+          "path": "src/eda/runtime.ts",
+          "sha256": "c377b4c920d3081636e6739db79643feee96be438fbac6a290eb9fe2d09dd63a",
+          "bytes": 6801,
+          "url": "https://github.com/easyeda/eext-design-rule-generator/blob/2cf9635b335bf8c15cd046a1c2cf08f8b9118f88/src/eda/runtime.ts"
+        },
+        {
+          "path": "package.json",
+          "sha256": "6cb3a34b6069f3a061e1199b91569096e56ed2d9a7b720c8b1fb099ef34fb6ba",
+          "bytes": 2125,
+          "url": "https://github.com/easyeda/eext-design-rule-generator/blob/2cf9635b335bf8c15cd046a1c2cf08f8b9118f88/package.json"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_Message"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "applyPlan",
+        "createSnapshot",
+        "openRuleWorkbench",
+        "readBackupSummary",
+        "restoreBackup",
+        "restoreRuleBackup"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-design-rules",
+        "easyeda-end-to-end"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-device-attribute-editor",
+      "revision": "e1f10265743c17a34ba065bba46d4c1bcdc6b690",
+      "url": "https://github.com/easyeda/eext-device-attribute-editor",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "f11e619b5700db10550a5bc847eba17d1778d5be34677ea6d94f75ba4673b18f",
+          "bytes": 975,
+          "url": "https://github.com/easyeda/eext-device-attribute-editor/blob/e1f10265743c17a34ba065bba46d4c1bcdc6b690/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "6499b036c3b4f6fcb690604cbcee3a1d262951a67c58166cf315c3bdb593f98c",
+          "bytes": 1049,
+          "url": "https://github.com/easyeda/eext-device-attribute-editor/blob/e1f10265743c17a34ba065bba46d4c1bcdc6b690/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "openBatchPanel",
+        "openPanel"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-component-library"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-diff-pair-assistant",
+      "revision": "99fc251f2a4a550d72609a54bd1d96dade84cf1f",
+      "url": "https://github.com/easyeda/eext-diff-pair-assistant",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "18f488497da63ba6ca5f0a4dc374387b897c71879ba01fad8f95aff5f23ca8b0",
+          "bytes": 3839,
+          "url": "https://github.com/easyeda/eext-diff-pair-assistant/blob/99fc251f2a4a550d72609a54bd1d96dade84cf1f/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "9d33ac40914bd05384ac8366dc05caaeb9d46d795960f98fa5fbe231a7ec9ad1",
+          "bytes": 1255,
+          "url": "https://github.com/easyeda/eext-diff-pair-assistant/blob/99fc251f2a4a550d72609a54bd1d96dade84cf1f/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "openDiffPairAssistant",
+        "openDiffPairRuleManager"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-pcb-routing",
+        "easyeda-design-rules"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-docs-generator",
+      "revision": "8fa4e175f517f7d6b4c088f295651979db3c1ae6",
+      "url": "https://github.com/easyeda/eext-docs-generator",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "210d59e7ec5702907e5cc77edc3a9f5c170e5101177c4688916bd5d2050a8e74",
+          "bytes": 1027,
+          "url": "https://github.com/easyeda/eext-docs-generator/blob/8fa4e175f517f7d6b4c088f295651979db3c1ae6/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "a04a284857f10bd66aa9d84f48ab0273f89f6d75875b024e52f22633a419540f",
+          "bytes": 18907,
+          "url": "https://github.com/easyeda/eext-docs-generator/blob/8fa4e175f517f7d6b4c088f295651979db3c1ae6/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "dmt_Board",
+        "dmt_EditorControl",
+        "dmt_Project",
+        "dmt_Schematic",
+        "dmt_SelectControl",
+        "pcb_Document",
+        "pcb_Drc",
+        "pcb_Layer",
+        "pcb_ManufactureData",
+        "pcb_Net",
+        "pcb_Primitive",
+        "pcb_PrimitiveArc",
+        "pcb_PrimitiveComponent",
+        "pcb_PrimitiveDimension",
+        "pcb_PrimitiveFill",
+        "pcb_PrimitiveLine",
+        "pcb_PrimitivePad",
+        "pcb_PrimitivePolyline",
+        "pcb_PrimitivePour",
+        "pcb_PrimitiveRegion",
+        "pcb_PrimitiveString",
+        "pcb_PrimitiveVia",
+        "sch_ManufactureData",
+        "sch_PrimitiveComponent",
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_Storage"
+      ],
+      "entryExports": [
+        "activate",
+        "generateDoc",
+        "generatePcbReport",
+        "generateProcurement",
+        "openSettings"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-documentation"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-dwg-importer",
+      "revision": "cdf3814c8b775d6e5ee19f4f9d8f027b74ec5825",
+      "url": "https://github.com/easyeda/eext-dwg-importer",
+      "license": "GPL-3.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "9fe97912ce4dde9b33304591ba490d9db62065b6cc0ec15a9454d5a36781f50f",
+          "bytes": 7208,
+          "url": "https://github.com/easyeda/eext-dwg-importer/blob/cdf3814c8b775d6e5ee19f4f9d8f027b74ec5825/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "8be5e452ba7c5f38d57ee18f5e4a8e7c1bc62f142993c50d2b58a97128533003",
+          "bytes": 1653,
+          "url": "https://github.com/easyeda/eext-dwg-importer/blob/cdf3814c8b775d6e5ee19f4f9d8f027b74ec5825/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [
+        "about",
+        "activate",
+        "foo",
+        "importDwgFootprint",
+        "importDwgPcb",
+        "importDwgSch"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-cad-integration"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-dynamic-fill-region-for-silkscreen",
+      "revision": "27f0f4227b4dcaa9d1d03e878cbb3710f2c54fe5",
+      "url": "https://github.com/easyeda/eext-dynamic-fill-region-for-silkscreen",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "118d0853f0572fb0bd4b7da58744d0790599f1f792a979aa51b0aa11ec600233",
+          "bytes": 2603,
+          "url": "https://github.com/easyeda/eext-dynamic-fill-region-for-silkscreen/blob/27f0f4227b4dcaa9d1d03e878cbb3710f2c54fe5/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "08e22a2ab15a57f6442ac2c55a8c710a7191cca3238c5634d9e3280f896249aa",
+          "bytes": 30095,
+          "url": "https://github.com/easyeda/eext-dynamic-fill-region-for-silkscreen/blob/27f0f4227b4dcaa9d1d03e878cbb3710f2c54fe5/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "dmt_SelectControl",
+        "pcb_Event",
+        "pcb_MathPolygon",
+        "pcb_PrimitiveFill",
+        "pcb_SelectControl",
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_Message",
+        "sys_Timer"
+      ],
+      "entryExports": [
+        "activate",
+        "drawDynamicFill"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-silkscreen-art"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-easyeda-api-agent",
+      "revision": "c54a6f9a30717c327e2c9022aff2fbd9f9b8498e",
+      "url": "https://github.com/easyeda/eext-easyeda-api-agent",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "46b6cbc704f4ce3ad37bdcc3b40f29a4e7a49bbda7002bcae6e3a0dfb50fde6b",
+          "bytes": 1147,
+          "url": "https://github.com/easyeda/eext-easyeda-api-agent/blob/c54a6f9a30717c327e2c9022aff2fbd9f9b8498e/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "27b58bf6055418b369512f1c3af02e2eec1c11a3dffafbcb5cf63545d0eedfcd",
+          "bytes": 572,
+          "url": "https://github.com/easyeda/eext-easyeda-api-agent/blob/c54a6f9a30717c327e2c9022aff2fbd9f9b8498e/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "openApiAgent"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-schematic-design"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-excalidraw",
+      "revision": "448db2cb66f497c26dd1597386759ea0325b6bc8",
+      "url": "https://github.com/easyeda/eext-excalidraw",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "0a05a44f2502372d8407f2337217a2ca6e84ab761a908a9ddc16a783ed8585df",
+          "bytes": 1058,
+          "url": "https://github.com/easyeda/eext-excalidraw/blob/448db2cb66f497c26dd1597386759ea0325b6bc8/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "44c052e81948ba81166fae8658b100b8b33958fdaca0cc00634165f0753e7811",
+          "bytes": 1184,
+          "url": "https://github.com/easyeda/eext-excalidraw/blob/448db2cb66f497c26dd1597386759ea0325b6bc8/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "openExcalidraw"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-silkscreen-art"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-export-design-archive",
+      "revision": "9f1e7b5aa5f53c730ed801fa3bd7e56de44a5f0d",
+      "url": "https://github.com/easyeda/eext-export-design-archive",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "bf66cb88205022b40d3a26f610f1ae5738100d14668b4cab852fb893f4b08ac1",
+          "bytes": 1617,
+          "url": "https://github.com/easyeda/eext-export-design-archive/blob/9f1e7b5aa5f53c730ed801fa3bd7e56de44a5f0d/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "6d5d006a169c6290a849ee3f29845f4a080e5acea200093862b41c5855922157",
+          "bytes": 1887,
+          "url": "https://github.com/easyeda/eext-export-design-archive/blob/9f1e7b5aa5f53c730ed801fa3bd7e56de44a5f0d/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Environment",
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_MessageBox"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "exportDeviceArchive",
+        "exportDeviceArchiveWithLcscId",
+        "exportDeviceList",
+        "exportFootprintArchive",
+        "exportProjectArchive"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-project-backup"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-export-design-report",
+      "revision": "31a8cfec95bcae13e981b912c6bc86025062dca0",
+      "url": "https://github.com/easyeda/eext-export-design-report",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "03bb0e07fb790ea55ee7d09d7cf0dfd60a976e18649cc435a5100f05362bc413",
+          "bytes": 3069,
+          "url": "https://github.com/easyeda/eext-export-design-report/blob/31a8cfec95bcae13e981b912c6bc86025062dca0/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "31040116752a0701c88a0d06841ceae25d41ee1fa3568f05eea7c57cfa2f275a",
+          "bytes": 34322,
+          "url": "https://github.com/easyeda/eext-export-design-report/blob/31a8cfec95bcae13e981b912c6bc86025062dca0/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "pcb_Drc",
+        "pcb_Net",
+        "pcb_PrimitiveArc",
+        "pcb_PrimitiveComponent",
+        "pcb_PrimitiveLine",
+        "pcb_PrimitivePad",
+        "pcb_PrimitivePolyline",
+        "pcb_PrimitiveRegion",
+        "pcb_SelectControl",
+        "sys_Environment",
+        "sys_FileSystem",
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_Message",
+        "sys_MessageBox",
+        "sys_Storage"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "extractAllNetDetails",
+        "extractDifferentialPairsDetails",
+        "extractEqualLengthNetGroupsDetails",
+        "extractNetClassLengthDetails",
+        "extractPadPairGroupsDetails",
+        "extractPcbInfo",
+        "extractSelectPadDetails",
+        "openPanelUtilization"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-documentation"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-export-gencad",
+      "revision": "aba4dff5b0fb8e1c5ad8288b07eb56b01dd0ab9e",
+      "url": "https://github.com/easyeda/eext-export-gencad",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "f827116fe5295cd158c8a108e0c1429a7995ab61298608440ba5f4321fdac858",
+          "bytes": 1342,
+          "url": "https://github.com/easyeda/eext-export-gencad/blob/aba4dff5b0fb8e1c5ad8288b07eb56b01dd0ab9e/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "55eb5062510d93c3354ab9b68495bc9b4c4855d4fce88df806cd8a2170afd5ee",
+          "bytes": 39724,
+          "url": "https://github.com/easyeda/eext-export-gencad/blob/aba4dff5b0fb8e1c5ad8288b07eb56b01dd0ab9e/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "dmt_Project",
+        "dmt_SelectControl",
+        "pcb_Layer",
+        "pcb_Net",
+        "pcb_PrimitiveArc",
+        "pcb_PrimitiveAttribute",
+        "pcb_PrimitiveComponent",
+        "pcb_PrimitiveLine",
+        "pcb_PrimitivePad",
+        "pcb_PrimitivePolyline",
+        "pcb_PrimitiveVia",
+        "sys_Dialog",
+        "sys_FileManager",
+        "sys_FileSystem",
+        "sys_I18n",
+        "sys_Message"
+      ],
+      "entryExports": [
+        "activate",
+        "exportGencad"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-manufacturing-export"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-export-hyperlynx",
+      "revision": "39acea28a1d3fb1628b48c08954723fecaa81f3b",
+      "url": "https://github.com/easyeda/eext-export-hyperlynx",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "4ddad6f354adfbe0b0b621747ca1461be25456397f47630c2c98416ffed94fcf",
+          "bytes": 2733,
+          "url": "https://github.com/easyeda/eext-export-hyperlynx/blob/39acea28a1d3fb1628b48c08954723fecaa81f3b/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "95274522f13b715d13aed0967e8fc912e999d1f9950add267002deeec65dd678",
+          "bytes": 1617,
+          "url": "https://github.com/easyeda/eext-export-hyperlynx/blob/39acea28a1d3fb1628b48c08954723fecaa81f3b/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "dmt_Project",
+        "dmt_SelectControl",
+        "sys_Dialog",
+        "sys_FileSystem",
+        "sys_I18n",
+        "sys_Message"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "exportHyperLynx"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-manufacturing-export"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-export-pcb-to-svg",
+      "revision": "f68898d18c8279e2aaf84a5b2ff07969ebeb005e",
+      "url": "https://github.com/easyeda/eext-export-pcb-to-svg",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "8d85f80c311749899e35cee3bbf2650647b98f8abd71937f16415e593c101bb8",
+          "bytes": 6718,
+          "url": "https://github.com/easyeda/eext-export-pcb-to-svg/blob/f68898d18c8279e2aaf84a5b2ff07969ebeb005e/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "a04012df013a9e48fc1472d2404ce3671c5f1187fc2a3c6eea99efc85bf2cee3",
+          "bytes": 12034,
+          "url": "https://github.com/easyeda/eext-export-pcb-to-svg/blob/f68898d18c8279e2aaf84a5b2ff07969ebeb005e/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "dmt_Board",
+        "dmt_Project",
+        "dmt_SelectControl",
+        "pcb_ManufactureData",
+        "sys_Dialog",
+        "sys_FileSystem",
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_Message"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "exportAllBoardsToSvg",
+        "exportCurrentBoardToSvg",
+        "exportCurrentBoardToSvgCustom",
+        "menuPlaceholder"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-manufacturing-export"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-extension-demo",
+      "revision": "739c9a33aeb03a2715966c4ad5cf3af919b599ef",
+      "url": "https://github.com/easyeda/eext-extension-demo",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "52309a78d9157faaafc6390f3a7b7d5d51d79a38356065eac1dab860b847937f",
+          "bytes": 1281,
+          "url": "https://github.com/easyeda/eext-extension-demo/blob/739c9a33aeb03a2715966c4ad5cf3af919b599ef/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "bc62916175ab2f3af9aebc83f8d3ce87fb888ad36ae3f63cc73ec8e018999db0",
+          "bytes": 5308,
+          "url": "https://github.com/easyeda/eext-extension-demo/blob/739c9a33aeb03a2715966c4ad5cf3af919b599ef/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "pcb_PrimitiveArc",
+        "pcb_PrimitiveComponent",
+        "pcb_PrimitiveFill",
+        "pcb_PrimitiveLine",
+        "pcb_PrimitivePad",
+        "pcb_PrimitivePolyline",
+        "pcb_PrimitivePour",
+        "pcb_PrimitiveString",
+        "pcb_PrimitiveVia",
+        "sch_PrimitiveComponent",
+        "sch_PrimitiveText",
+        "sch_PrimitiveWire",
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "batchAddComponentAttributesForPCB",
+        "batchAddComponentAttributesForSCH",
+        "batchPlacementTextForPCB",
+        "batchPlacementTextForSCH",
+        "deletePrimitivesForPCB",
+        "deletePrimitivesForSCH",
+        "randomAllocateDesignatesForPCB",
+        "randomAllocateDesignatesForSCH",
+        "statisticalPrimitivesForPCB",
+        "statisticalPrimitivesForSCH"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-extension-development"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-external-tool-integration-demo",
+      "revision": "9b6e6f325a2d4210205f4904389871155a058f11",
+      "url": "https://github.com/easyeda/eext-external-tool-integration-demo",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "c9bed50e2bcd74522a102c482424a298cc808bd8069972b7d29b4e9f1e022eb5",
+          "bytes": 9607,
+          "url": "https://github.com/easyeda/eext-external-tool-integration-demo/blob/9b6e6f325a2d4210205f4904389871155a058f11/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "7ea75bc5f0427672eb6ea29da7cdc71a7b29ce1edf53c940e8c76f6518974426",
+          "bytes": 18117,
+          "url": "https://github.com/easyeda/eext-external-tool-integration-demo/blob/9b6e6f325a2d4210205f4904389871155a058f11/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "pcb_ManufactureData",
+        "sch_ManufactureData",
+        "sys_ClientUrl",
+        "sys_Dialog",
+        "sys_FileSystem",
+        "sys_I18n",
+        "sys_LoadingAndProgressBar",
+        "sys_Message",
+        "sys_Timer",
+        "sys_Window"
+      ],
+      "entryExports": [
+        "about",
+        "exportNetlistFile",
+        "exportODBFile",
+        "uploadLocalFile"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-extension-development"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-fpc-workshop",
+      "revision": "f8a245ab74a5405011bdd98b65b0b2af5f05cdca",
+      "url": "https://github.com/easyeda/eext-fpc-workshop",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "0a70bc263132e5d68dcfe832f00d4c907fc2524fa917406c2d165e063329923f",
+          "bytes": 1918,
+          "url": "https://github.com/easyeda/eext-fpc-workshop/blob/f8a245ab74a5405011bdd98b65b0b2af5f05cdca/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "6d45180daab0906f7245423e86d82f4de499e8b7492d7be60fcc4e5b4c91fcf5",
+          "bytes": 700,
+          "url": "https://github.com/easyeda/eext-fpc-workshop/blob/f8a245ab74a5405011bdd98b65b0b2af5f05cdca/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "openFpcWorkshop"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-special-pcb"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-freerouting-intergration",
+      "revision": "dab07252c22b408759693ee82845fd550243c3b5",
+      "url": "https://github.com/easyeda/eext-freerouting-intergration",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "3860413c07548c542e338fab8e318c0892a8c0b414b7533927a6e16f6ff7fba6",
+          "bytes": 4685,
+          "url": "https://github.com/easyeda/eext-freerouting-intergration/blob/dab07252c22b408759693ee82845fd550243c3b5/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "5b0616d33b2a7a54753a5e4a767677dc673dffce644a626c8fc969c7e77d1acc",
+          "bytes": 7454,
+          "url": "https://github.com/easyeda/eext-freerouting-intergration/blob/dab07252c22b408759693ee82845fd550243c3b5/src/index.ts"
+        },
+        {
+          "path": "src/router/FreeRoutingRouter.ts",
+          "sha256": "b15cd46bdf2ce9d8121cda4252e285621b67e751af677ce01d246373d370d28f",
+          "bytes": 9535,
+          "url": "https://github.com/easyeda/eext-freerouting-intergration/blob/dab07252c22b408759693ee82845fd550243c3b5/src/router/FreeRoutingRouter.ts"
+        },
+        {
+          "path": "src/types/index.ts",
+          "sha256": "f57b6f08f28edcf6e267e6b491bcbde4049bf2360da43d80a0eb72971c7cd635",
+          "bytes": 4400,
+          "url": "https://github.com/easyeda/eext-freerouting-intergration/blob/dab07252c22b408759693ee82845fd550243c3b5/src/types/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "pcb_Document",
+        "pcb_Drc",
+        "pcb_Layer",
+        "pcb_ManufactureData",
+        "pcb_PrimitiveArc",
+        "pcb_PrimitiveLine",
+        "pcb_PrimitiveVia",
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_LoadingAndProgressBar",
+        "sys_Log",
+        "sys_MessageBus"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "autoRoute",
+        "autoRouteCustom",
+        "stopRoute"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-freerouting"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-gencad-viewer",
+      "revision": "b537e0cc0dfcf5be544e2d0589f457f719fb21a1",
+      "url": "https://github.com/easyeda/eext-gencad-viewer",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "ec761a5f19ff01a04e0ab776dd303df48ec6010d38b1a0d433866ad4cd0713ea",
+          "bytes": 1985,
+          "url": "https://github.com/easyeda/eext-gencad-viewer/blob/b537e0cc0dfcf5be544e2d0589f457f719fb21a1/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b6a9635a3ffd99006aa756e8557f8987c2a748451d224a4a80a01295345f1a82",
+          "bytes": 1054,
+          "url": "https://github.com/easyeda/eext-gencad-viewer/blob/b537e0cc0dfcf5be544e2d0589f457f719fb21a1/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "openGenCAD"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-manufacturing-export"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-generate-schematic-from-netlist",
+      "revision": "35679a0f1e6b1ee2cca8fe0479fdd7def5e75f8d",
+      "url": "https://github.com/easyeda/eext-generate-schematic-from-netlist",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "ef4b6e16f62bd1ee9615bc810a0eb08f9e6fe0c7755ced884a67b8839c19031a",
+          "bytes": 894,
+          "url": "https://github.com/easyeda/eext-generate-schematic-from-netlist/blob/35679a0f1e6b1ee2cca8fe0479fdd7def5e75f8d/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "4a400c26e559b5d57bac1b80ad63c1cc12647ba56c561466ddeea7250250fe15",
+          "bytes": 19009,
+          "url": "https://github.com/easyeda/eext-generate-schematic-from-netlist/blob/35679a0f1e6b1ee2cca8fe0479fdd7def5e75f8d/src/index.ts"
+        },
+        {
+          "path": "src/enetImporter.ts",
+          "sha256": "4b21bc01d99c150892f1792f9090938a0e5058d948c61404216a1a59cac2c6fd",
+          "bytes": 6801,
+          "url": "https://github.com/easyeda/eext-generate-schematic-from-netlist/blob/35679a0f1e6b1ee2cca8fe0479fdd7def5e75f8d/src/enetImporter.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "lib_Device",
+        "lib_LibrariesList",
+        "sch_PrimitiveComponent",
+        "sch_PrimitiveWire",
+        "sys_Dialog",
+        "sys_FileSystem",
+        "sys_I18n",
+        "sys_Log",
+        "sys_Message"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "importEnetSchematic",
+        "importNetlist"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-schematic-design",
+        "easyeda-netlist-import"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-generate-silkscreen",
+      "revision": "f87bf3c725dea2dcb2b825a9faa90cb869dba86b",
+      "url": "https://github.com/easyeda/eext-generate-silkscreen",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "7f1db12a6c7a7cd4395216264a7e32a3f18f371bee35d15c297d26bbeb641b8d",
+          "bytes": 1428,
+          "url": "https://github.com/easyeda/eext-generate-silkscreen/blob/f87bf3c725dea2dcb2b825a9faa90cb869dba86b/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b7c25a589c987ab489a260b8cdab5ee96ad02adcc19dc5fbab54472a32f5cfcb",
+          "bytes": 985,
+          "url": "https://github.com/easyeda/eext-generate-silkscreen/blob/f87bf3c725dea2dcb2b825a9faa90cb869dba86b/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "NewSilkscreen",
+        "activate",
+        "bonding_pad",
+        "silkscreen"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-silkscreen-art"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-gerber-viewer",
+      "revision": "085eb879b61ee84dfc7288852b490990282327e5",
+      "url": "https://github.com/easyeda/eext-gerber-viewer",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "bd5883936bb809633686b1ad06387e09e0f97bc079fbebd819e100dd296c3843",
+          "bytes": 1348,
+          "url": "https://github.com/easyeda/eext-gerber-viewer/blob/085eb879b61ee84dfc7288852b490990282327e5/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "2e399eb37d0f266351fd7aada867807f4b577550a15c2a9d8d235a1752b26919",
+          "bytes": 1931,
+          "url": "https://github.com/easyeda/eext-gerber-viewer/blob/085eb879b61ee84dfc7288852b490990282327e5/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "pcb_ManufactureData",
+        "sys_FileSystem",
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_MessageBus",
+        "sys_Window"
+      ],
+      "entryExports": [
+        "activate",
+        "openEasyEDAGerberViewer",
+        "openGerberViewer",
+        "openOnlineGerberViewer",
+        "viewPcbGerber"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-manufacturing-export"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-graffiti-silkscreen",
+      "revision": "8d969f1c6e0bb8b913abf9780a26c74961a58669",
+      "url": "https://github.com/easyeda/eext-graffiti-silkscreen",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "4771a3a2dac5ebdb9bc18813310e626a7ff0753b08a846896ffbba569eabde59",
+          "bytes": 1065,
+          "url": "https://github.com/easyeda/eext-graffiti-silkscreen/blob/8d969f1c6e0bb8b913abf9780a26c74961a58669/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "2d787d3dc8078fc575d1fa65dfd8d3370e81a7e87fc557609af3d8e39ff86574",
+          "bytes": 538,
+          "url": "https://github.com/easyeda/eext-graffiti-silkscreen/blob/8d969f1c6e0bb8b913abf9780a26c74961a58669/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_MessageBox"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "tuYaWindow"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-silkscreen-art"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-image-contour-to-pcb",
+      "revision": "3bbf294d2f2cfde51fb2f807fc45991f201fb0e7",
+      "url": "https://github.com/easyeda/eext-image-contour-to-pcb",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "0f3e50c93c30fafe885ecbde23ee12643b951cb78fb3d794f3709cb96ab12b4c",
+          "bytes": 1271,
+          "url": "https://github.com/easyeda/eext-image-contour-to-pcb/blob/3bbf294d2f2cfde51fb2f807fc45991f201fb0e7/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "f7a4a21493e22c50713aa8e7750c18edc0252b4faee416aa29c2bb9e055dd6a8",
+          "bytes": 955,
+          "url": "https://github.com/easyeda/eext-image-contour-to-pcb/blob/3bbf294d2f2cfde51fb2f807fc45991f201fb0e7/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "openImageTool"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-silkscreen-art"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-interactive-bom",
+      "revision": "3606355f002a9380fe2f7b956b2969b09df65545",
+      "url": "https://github.com/easyeda/eext-interactive-bom",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "6ce579c5ac1417ba99118cb148a7575a0eca48e2e4c0f20f722901d2937761b3",
+          "bytes": 2914,
+          "url": "https://github.com/easyeda/eext-interactive-bom/blob/3606355f002a9380fe2f7b956b2969b09df65545/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "be019433b22431e0cc941b496a759c1c4f4536f550f4e9f3512837930341f9fa",
+          "bytes": 6033,
+          "url": "https://github.com/easyeda/eext-interactive-bom/blob/3606355f002a9380fe2f7b956b2969b09df65545/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "dmt_SelectControl",
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_Window"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "generateAndDownload",
+        "showInteractiveBomPopup",
+        "showInteractiveBomWindow"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-bom-assembly"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-interactive-html-bom",
+      "revision": "430ea9d06a1c975ed3d2c6da83a6686a1f737084",
+      "url": "https://github.com/easyeda/eext-interactive-html-bom",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "0ec178092f19338bf59a5987c802e56f0c5d2d156e01c673970a50c9c5cb6cfe",
+          "bytes": 1376,
+          "url": "https://github.com/easyeda/eext-interactive-html-bom/blob/430ea9d06a1c975ed3d2c6da83a6686a1f737084/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b0053b69fdce718f5826934854e8c3a408817e2bb43681b81668274b3aa243f7",
+          "bytes": 1442,
+          "url": "https://github.com/easyeda/eext-interactive-html-bom/blob/430ea9d06a1c975ed3d2c6da83a6686a1f737084/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_Storage"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "exportAdvancedHTML",
+        "exportHTML",
+        "showIBOM"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-bom-assembly"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-jlc-order-dfm-checker",
+      "revision": "afd538786d510f537ad4fa47c6329e6a99dc7625",
+      "url": "https://github.com/easyeda/eext-jlc-order-dfm-checker",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "41b0859f962a6281dc079597d91f22f9d3de695e30cc3dc7a65f3d68dd8bdb85",
+          "bytes": 7338,
+          "url": "https://github.com/easyeda/eext-jlc-order-dfm-checker/blob/afd538786d510f537ad4fa47c6329e6a99dc7625/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "143ebd165fc569e1647fe014649d4f2744679648e926a68392a6fd1240986d17",
+          "bytes": 122297,
+          "url": "https://github.com/easyeda/eext-jlc-order-dfm-checker/blob/afd538786d510f537ad4fa47c6329e6a99dc7625/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "pcb_Layer",
+        "pcb_MathPolygon",
+        "pcb_Net",
+        "pcb_Primitive",
+        "pcb_PrimitiveArc",
+        "pcb_PrimitiveAttribute",
+        "pcb_PrimitiveComponent",
+        "pcb_PrimitiveFill",
+        "pcb_PrimitiveLine",
+        "pcb_PrimitivePad",
+        "pcb_PrimitivePolyline",
+        "pcb_PrimitivePour",
+        "pcb_PrimitivePoured",
+        "pcb_PrimitiveString",
+        "pcb_PrimitiveVia",
+        "sys_Dialog",
+        "sys_FileManager",
+        "sys_FileSystem",
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_Log",
+        "sys_PanelControl",
+        "sys_Storage",
+        "sys_Unit"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "exportPadSpacingReport",
+        "exportPcbReport",
+        "exportSmtReport",
+        "padSpacing",
+        "padSpacingWithInput",
+        "pcbDfm",
+        "pcbDfmWithMaterial",
+        "performSmtCheck",
+        "setMaterialInput",
+        "setPadSpacingInput",
+        "showLog",
+        "smtDfm"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-drc-dfm",
+        "easyeda-end-to-end"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-kipida-integration",
+      "revision": "af11ba17b6b1487efc1b87fc580a0ff6f97b1f81",
+      "url": "https://github.com/easyeda/eext-kipida-integration",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "60f370d71e0de25ffb4dc0e103095dfd98aa326c370d4daae4d969b25c2e4990",
+          "bytes": 5973,
+          "url": "https://github.com/easyeda/eext-kipida-integration/blob/af11ba17b6b1487efc1b87fc580a0ff6f97b1f81/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "5d7ae084720e7a7cc0bf1884069d715a673cb1b1fe899ac651fac7825c6e51ff",
+          "bytes": 11628,
+          "url": "https://github.com/easyeda/eext-kipida-integration/blob/af11ba17b6b1487efc1b87fc580a0ff6f97b1f81/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "pcb_Net",
+        "sys_Dialog",
+        "sys_IFrame",
+        "sys_LoadingAndProgressBar",
+        "sys_MessageBus"
+      ],
+      "entryExports": [
+        "about",
+        "configureService",
+        "runIRDropAnalysis"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-power-integrity"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-kirouting-integration",
+      "revision": "d682f9f99f018582450e216f75cd19672b09f031",
+      "url": "https://github.com/easyeda/eext-kirouting-integration",
+      "license": null,
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "8b93678db2b256bb2baba2a77d151053a1f7e105abb2bae89bca95ff6a852bd7",
+          "bytes": 10263,
+          "url": "https://github.com/easyeda/eext-kirouting-integration/blob/d682f9f99f018582450e216f75cd19672b09f031/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "d3cc110db0ea673292cbab5a46aba21c0348af3bb643c885ab3fbf85973b1ac7",
+          "bytes": 38438,
+          "url": "https://github.com/easyeda/eext-kirouting-integration/blob/d682f9f99f018582450e216f75cd19672b09f031/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "pcb_Layer",
+        "pcb_Net",
+        "pcb_PrimitiveArc",
+        "pcb_PrimitiveComponent",
+        "pcb_PrimitiveLine",
+        "pcb_PrimitivePolyline",
+        "pcb_PrimitiveVia",
+        "sys_ClientUrl",
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_MessageBus",
+        "sys_Timer"
+      ],
+      "entryExports": [
+        "about",
+        "autoRouteAll"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-kirouting"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-knowledge-base",
+      "revision": "5c666fe9ce711284f9a52dba24c3040ed7f57535",
+      "url": "https://github.com/easyeda/eext-knowledge-base",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "79c164b47a80af81c573e2b1d13bafd883453dce585ead000d855e82cd92c633",
+          "bytes": 3812,
+          "url": "https://github.com/easyeda/eext-knowledge-base/blob/5c666fe9ce711284f9a52dba24c3040ed7f57535/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "f6c54d936b89a71ce498edaadcc27d9815914e9fe4b7c168f4f1054e910992b4",
+          "bytes": 1139,
+          "url": "https://github.com/easyeda/eext-knowledge-base/blob/5c666fe9ce711284f9a52dba24c3040ed7f57535/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "openAIAssistant",
+        "openAISettings"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-knowledge-base"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-mcad-integration-with-freecad",
+      "revision": "e3c30a527194d34def8ada4f84451de298caa048",
+      "url": "https://github.com/easyeda/eext-mcad-integration-with-freecad",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "46e37d632ff11dff483604cd5c9e7a70b1e5a1ae77532378976297bd9e7559ef",
+          "bytes": 12647,
+          "url": "https://github.com/easyeda/eext-mcad-integration-with-freecad/blob/e3c30a527194d34def8ada4f84451de298caa048/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "8b172b3321b5c0b817c1d6d0085ab8bb12a3bc2484a1d6bc526f547a25006c01",
+          "bytes": 36095,
+          "url": "https://github.com/easyeda/eext-mcad-integration-with-freecad/blob/e3c30a527194d34def8ada4f84451de298caa048/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "pcb_Document",
+        "pcb_Event",
+        "pcb_ManufactureData",
+        "pcb_PrimitiveComponent",
+        "pcb_SelectControl",
+        "sys_Dialog",
+        "sys_FileSystem",
+        "sys_I18n",
+        "sys_Message",
+        "sys_Storage",
+        "sys_WebSocket"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "checkFreeCADConnection",
+        "connectFreeCAD",
+        "copyFreeCADScript",
+        "disablePcbSync",
+        "disableShellSync",
+        "disconnectFreeCAD",
+        "enablePcbSync",
+        "enableShellSync",
+        "exportShellToFreeCAD",
+        "exportToFreeCAD"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-cad-integration"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-mcad-integration-with-solidworks",
+      "revision": "1368d185950b07492737eab27e542b631f3199f5",
+      "url": "https://github.com/easyeda/eext-mcad-integration-with-solidworks",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "180f37e59379816ddc9fe2d595ea993e5a3a53e9962087d0f7b94965c978c7c6",
+          "bytes": 2718,
+          "url": "https://github.com/easyeda/eext-mcad-integration-with-solidworks/blob/1368d185950b07492737eab27e542b631f3199f5/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "58ad90a47539989392e91cece0a5be0e34614d8c387709730c31e3e5960f6a6c",
+          "bytes": 33118,
+          "url": "https://github.com/easyeda/eext-mcad-integration-with-solidworks/blob/1368d185950b07492737eab27e542b631f3199f5/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "pcb_Document",
+        "pcb_Event",
+        "pcb_ManufactureData",
+        "pcb_PrimitiveComponent",
+        "pcb_SelectControl",
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_Message",
+        "sys_Storage",
+        "sys_WebSocket"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "checkSolidWorksConnection",
+        "connectSolidWorks",
+        "disableBidirectional",
+        "disconnectSolidWorks",
+        "enableBidirectional",
+        "exportToSolidWorks",
+        "syncToSolidWorks"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-cad-integration"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-nc-pad-converter",
+      "revision": "acbc6436576fd18917a095e45e72aa41cb5d752b",
+      "url": "https://github.com/easyeda/eext-nc-pad-converter",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "3fe117dc735555d6e56a10c53ac6a79d9faf42ba7ca8564222d2429a0d6323bf",
+          "bytes": 2412,
+          "url": "https://github.com/easyeda/eext-nc-pad-converter/blob/acbc6436576fd18917a095e45e72aa41cb5d752b/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "253b5843e9eaf306d6d1ae4bb1dcfde44e9fb7bceba477cdd3b7db1c07b48ce4",
+          "bytes": 256,
+          "url": "https://github.com/easyeda/eext-nc-pad-converter/blob/acbc6436576fd18917a095e45e72aa41cb5d752b/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "onOpenConsole"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-special-pcb"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-netlist-explorer",
+      "revision": "6661961fc8780e13b97a9450a96afbaaf2960bf7",
+      "url": "https://github.com/easyeda/eext-netlist-explorer",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "9e0936edfcc3fc15f39a80376be067cb152e7b1b5dedc944d359ea29dca80007",
+          "bytes": 6128,
+          "url": "https://github.com/easyeda/eext-netlist-explorer/blob/6661961fc8780e13b97a9450a96afbaaf2960bf7/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "7a14c18ce9b1aaf44eb94a8836873b4b3338e8ea6a26358c747e9825b363d7c4",
+          "bytes": 5159,
+          "url": "https://github.com/easyeda/eext-netlist-explorer/blob/6661961fc8780e13b97a9450a96afbaaf2960bf7/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sch_ManufactureData",
+        "sch_PrimitiveComponent",
+        "sch_PrimitivePolygon",
+        "sch_PrimitiveText",
+        "sch_SelectControl",
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_Message",
+        "sys_MessageBus"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "generateNetlist"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-netlist-review"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-note-tools",
+      "revision": "4627a6aa190cc4741e46a99745d9d3cf8e69af82",
+      "url": "https://github.com/easyeda/eext-note-tools",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "a4484377af509accca9e12e0355f76b4429cb130773be5c3348971e45d35fc16",
+          "bytes": 532,
+          "url": "https://github.com/easyeda/eext-note-tools/blob/4627a6aa190cc4741e46a99745d9d3cf8e69af82/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "a191d492b6be978886821ede602bac747d22b44d592374171efbb45ee7232ecc",
+          "bytes": 1233,
+          "url": "https://github.com/easyeda/eext-note-tools/blob/4627a6aa190cc4741e46a99745d9d3cf8e69af82/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "pcb_LaTeX",
+        "pcb_Markdown",
+        "sch_LaTeX",
+        "sch_Markdown"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-documentation"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-pad-expand-helper",
+      "revision": "de5b2eb6bd6817bb25025d621c2f6010bc110cab",
+      "url": "https://github.com/easyeda/eext-pad-expand-helper",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "0c7d846cf83a1b611282c281488f497a44706e4e57b24c799b1922d31aed4b64",
+          "bytes": 6909,
+          "url": "https://github.com/easyeda/eext-pad-expand-helper/blob/de5b2eb6bd6817bb25025d621c2f6010bc110cab/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "c7dd0f4ccb87b0cbd89d35780703cb5b993daeba2d30cf54e72ad332e5ac6ceb",
+          "bytes": 1443,
+          "url": "https://github.com/easyeda/eext-pad-expand-helper/blob/de5b2eb6bd6817bb25025d621c2f6010bc110cab/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_I18n"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "generatePadSolderMaskExpansion"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-special-pcb"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-pad-fanout",
+      "revision": "7c88e571457e6d63463b7cb391e1e62bdbdd02d7",
+      "url": "https://github.com/easyeda/eext-pad-fanout",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "a6d5fc8882299fc72c0372833671c3a5ca0ce6db2746a0c268e5259127cc69d8",
+          "bytes": 2671,
+          "url": "https://github.com/easyeda/eext-pad-fanout/blob/7c88e571457e6d63463b7cb391e1e62bdbdd02d7/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b888f31054c935c760912b9e68fbb61f722ceeb73860bcf6f5b23b865629935f",
+          "bytes": 72633,
+          "url": "https://github.com/easyeda/eext-pad-fanout/blob/7c88e571457e6d63463b7cb391e1e62bdbdd02d7/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "pcb_Document",
+        "pcb_Drc",
+        "pcb_Event",
+        "pcb_Net",
+        "pcb_PrimitiveComponent",
+        "pcb_PrimitiveFill",
+        "pcb_PrimitiveLine",
+        "pcb_PrimitivePad",
+        "pcb_PrimitivePour",
+        "pcb_PrimitiveVia",
+        "pcb_SelectControl",
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_Message",
+        "sys_MessageBus",
+        "sys_Unit"
+      ],
+      "entryExports": [
+        "activate",
+        "deactivate",
+        "padFanout"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-pcb-routing"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-paden-integration",
+      "revision": "0bb14f58712100eb5b84db5be7bd0c0ef318ea88",
+      "url": "https://github.com/easyeda/eext-paden-integration",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "81dd4caceb6fbd163f0797be98026a95c3727e9f06937e0574b927c078d7f098",
+          "bytes": 6212,
+          "url": "https://github.com/easyeda/eext-paden-integration/blob/0bb14f58712100eb5b84db5be7bd0c0ef318ea88/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "907f68cc13f4c04e039fcb04d2db5db7c0b6f0e438a00d1ddd3f8857ccc2c113",
+          "bytes": 15347,
+          "url": "https://github.com/easyeda/eext-paden-integration/blob/0bb14f58712100eb5b84db5be7bd0c0ef318ea88/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "pcb_ManufactureData",
+        "sys_Dialog",
+        "sys_IFrame",
+        "sys_LoadingAndProgressBar",
+        "sys_MessageBus",
+        "sys_Storage"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "runPdnAnalysis",
+        "showResults"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-power-integrity"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-paden-integration-wasm",
+      "revision": "92c75f057ede5b9c8e7a5db36ae79f8014f5a26b",
+      "url": "https://github.com/easyeda/eext-paden-integration-wasm",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "71ce9c3e43de695398a61cb04c7f138b1b12b9adce49415bbc266111ee10cc8e",
+          "bytes": 7279,
+          "url": "https://github.com/easyeda/eext-paden-integration-wasm/blob/92c75f057ede5b9c8e7a5db36ae79f8014f5a26b/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "10a3d6c95cc6880f52749497fda383acee6a3c511f00ef2a871bef5fa5661812",
+          "bytes": 15239,
+          "url": "https://github.com/easyeda/eext-paden-integration-wasm/blob/92c75f057ede5b9c8e7a5db36ae79f8014f5a26b/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "pcb_ManufactureData",
+        "sys_Dialog",
+        "sys_IFrame",
+        "sys_LoadingAndProgressBar",
+        "sys_MessageBus"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "runPdnAnalysis",
+        "runPdnAnalysisDebug",
+        "showResults"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-power-integrity"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-pcb-component-grouping",
+      "revision": "95421773a0180b9c0f48b4fe382419c673bafe2a",
+      "url": "https://github.com/easyeda/eext-pcb-component-grouping",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "2b4b86e2b8580cda447f1f5220d6ba1b887e8dffc02d487fc22564144365d543",
+          "bytes": 1616,
+          "url": "https://github.com/easyeda/eext-pcb-component-grouping/blob/95421773a0180b9c0f48b4fe382419c673bafe2a/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "a402b9e248a3045fe00e9154dc30c7b1b6dfe295cebc1c8db7707575b93ccd7c",
+          "bytes": 2077,
+          "url": "https://github.com/easyeda/eext-pcb-component-grouping/blob/95421773a0180b9c0f48b4fe382419c673bafe2a/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_Message"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "groupingHybrid",
+        "groupingPage",
+        "groupingRectangle",
+        "groupingRollback",
+        "groupingSelection"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-pcb-layout"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-pcb-heater-trace-generator",
+      "revision": "89cf798b176f1f13f0dde29c5024ae4408f3ad1c",
+      "url": "https://github.com/easyeda/eext-pcb-heater-trace-generator",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "632c2de9091aa5bbb8ea4c18b3381086e8318db195cd72a45599bd2fa0877813",
+          "bytes": 3036,
+          "url": "https://github.com/easyeda/eext-pcb-heater-trace-generator/blob/89cf798b176f1f13f0dde29c5024ae4408f3ad1c/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "caa9cf89049a6f61b92327b7fd6f78076360e3ae977f8cf25ae7f221ab93b85d",
+          "bytes": 689,
+          "url": "https://github.com/easyeda/eext-pcb-heater-trace-generator/blob/89cf798b176f1f13f0dde29c5024ae4408f3ad1c/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [
+        "activate",
+        "openHeaterGenerator"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-special-pcb"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-pcb-price-calculator",
+      "revision": "5527d29e2e13975652f00f3dc0df3dd5417c597a",
+      "url": "https://github.com/easyeda/eext-pcb-price-calculator",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "458efec3bb752be3d6b1c66e9613b475dcbfdc2397004d6441ae3a1728cad705",
+          "bytes": 1677,
+          "url": "https://github.com/easyeda/eext-pcb-price-calculator/blob/5527d29e2e13975652f00f3dc0df3dd5417c597a/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "c6a407433a3a2b2fd1010a6a6e15cdb8c09a90a6a1e6a799d22f6839adba9fd2",
+          "bytes": 560,
+          "url": "https://github.com/easyeda/eext-pcb-price-calculator/blob/5527d29e2e13975652f00f3dc0df3dd5417c597a/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_IFrame",
+        "sys_Storage"
+      ],
+      "entryExports": [
+        "Debug",
+        "PcbPrice"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-bom-assembly"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-pcb-render-with-blender",
+      "revision": "6c8aef2be34d7733eb5e684f80af1059864013d1",
+      "url": "https://github.com/easyeda/eext-pcb-render-with-blender",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "7258d68ebb32a9ab832aae57ae5e4d98b5fba81bc7638e8d5aba1988a6569e95",
+          "bytes": 1945,
+          "url": "https://github.com/easyeda/eext-pcb-render-with-blender/blob/6c8aef2be34d7733eb5e684f80af1059864013d1/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b06fab809c5189cda9980db126b59f0fce95fb881b5f348f66cee401e4f7df71",
+          "bytes": 7873,
+          "url": "https://github.com/easyeda/eext-pcb-render-with-blender/blob/6c8aef2be34d7733eb5e684f80af1059864013d1/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "pcb_ManufactureData",
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_Message",
+        "sys_WebSocket"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "checkBlenderConnection",
+        "connectBlender",
+        "disconnectBlender",
+        "renderPCBInBlender"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-cad-integration"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-plm-integration-demo",
+      "revision": "92463b09f41d048b2a96593a8a2b34693c872115",
+      "url": "https://github.com/easyeda/eext-plm-integration-demo",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "d392a46ec6e222d4f56294f0c803b3fb99c48c11352acad3642280f3f504443e",
+          "bytes": 4806,
+          "url": "https://github.com/easyeda/eext-plm-integration-demo/blob/92463b09f41d048b2a96593a8a2b34693c872115/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "046a0e5e7442d5d021fc90c2184bc4fd8e60d443f002118bb77f7bf7194fdb72",
+          "bytes": 735,
+          "url": "https://github.com/easyeda/eext-plm-integration-demo/blob/92463b09f41d048b2a96593a8a2b34693c872115/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "openIframeDownload",
+        "openIframeSetting",
+        "openIframeUpload"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-project-backup",
+        "easyeda-documentation"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-power-net-highlighter",
+      "revision": "ce520393451a1d148b3b354bb5161416fd5ec283",
+      "url": "https://github.com/easyeda/eext-power-net-highlighter",
+      "license": "AGPL-3.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "29a977daf3f611bb846e4ec354a1f29eaf1ad8c01f49bc50f2d7ead03873e811",
+          "bytes": 4617,
+          "url": "https://github.com/easyeda/eext-power-net-highlighter/blob/ce520393451a1d148b3b354bb5161416fd5ec283/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-netlist-review"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-qrcode-generator",
+      "revision": "29371cdc7aa472a36e56b428db02aab8ffa3bac3",
+      "url": "https://github.com/easyeda/eext-qrcode-generator",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "b5a3dcf704883c64c687b5868d564f4242adf6b1ac9a579927a2e9aeb1c49b29",
+          "bytes": 1645,
+          "url": "https://github.com/easyeda/eext-qrcode-generator/blob/29371cdc7aa472a36e56b428db02aab8ffa3bac3/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "4d26d5f2cde0a2f6c2c2f06b89092515c0999d015b2da7f497e803fe88ddc157",
+          "bytes": 710,
+          "url": "https://github.com/easyeda/eext-qrcode-generator/blob/29371cdc7aa472a36e56b428db02aab8ffa3bac3/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "BatchImport",
+        "CreateQRCode",
+        "ImportImg",
+        "about",
+        "activate",
+        "test"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-silkscreen-art"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-run-api-gateway",
+      "revision": "e55348027d1008a3d448b8b228fbca7b82dc8381",
+      "url": "https://github.com/easyeda/eext-run-api-gateway",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "97c3566d4feabeade935adb93b2f36ad8035766b015a8ea5f7fcf14ca272b441",
+          "bytes": 5115,
+          "url": "https://github.com/easyeda/eext-run-api-gateway/blob/e55348027d1008a3d448b8b228fbca7b82dc8381/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "c916d2603c8311e35297cf96de1c7ade8f44358ecae51e31c17a971cbb3ba878",
+          "bytes": 15067,
+          "url": "https://github.com/easyeda/eext-run-api-gateway/blob/e55348027d1008a3d448b8b228fbca7b82dc8381/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_Message",
+        "sys_MessageBus",
+        "sys_Storage",
+        "sys_WebSocket"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "deactivate",
+        "reconnect",
+        "stopConnection",
+        "toggleAutoConnect"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [],
+      "disposition": "supplementary-reference"
+    },
+    {
+      "repository": "eext-schematic-pdf-interaction",
+      "revision": "03d3a6ec6c3d5ecbb6ad0ec55224f0d6ecb480ac",
+      "url": "https://github.com/easyeda/eext-schematic-pdf-interaction",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "4a14061edee91858764a6a8918be0ca5d62b2d9b42f3625ae962eb8c52082ff3",
+          "bytes": 1248,
+          "url": "https://github.com/easyeda/eext-schematic-pdf-interaction/blob/03d3a6ec6c3d5ecbb6ad0ec55224f0d6ecb480ac/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "48b4197f764e29e9df9cbf0d30f4ce4c3052b53c05dd24ff43aba7ff6c961d27",
+          "bytes": 381,
+          "url": "https://github.com/easyeda/eext-schematic-pdf-interaction/blob/03d3a6ec6c3d5ecbb6ad0ec55224f0d6ecb480ac/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_Message"
+      ],
+      "entryExports": [
+        "activate",
+        "openPdfDialog"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-netlist-review"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-signal-absence-detection",
+      "revision": "78f8ca3437e34c2f7976860a8e61adc511e36dd9",
+      "url": "https://github.com/easyeda/eext-signal-absence-detection",
+      "license": "MulanPSL-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "f578829ea64958dd9604b11a13bf302f6e81b26ecd3f03c192a38a2e82d6b4bf",
+          "bytes": 6321,
+          "url": "https://github.com/easyeda/eext-signal-absence-detection/blob/78f8ca3437e34c2f7976860a8e61adc511e36dd9/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-netlist-review",
+        "easyeda-drc-dfm"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-simulation-with-ltspice",
+      "revision": "0fb2afa1816481b50846f55c1c6dbacd5912569b",
+      "url": "https://github.com/easyeda/eext-simulation-with-ltspice",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "f9cb067eb467a1e0beba2d0ba1943fcc221fe27820eb09e92997bb531f7589c7",
+          "bytes": 151,
+          "url": "https://github.com/easyeda/eext-simulation-with-ltspice/blob/0fb2afa1816481b50846f55c1c6dbacd5912569b/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-simulation"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-simulation-with-ngspice",
+      "revision": "6536f1dac4c44b366777cdb18e344b1603be1ffc",
+      "url": "https://github.com/easyeda/eext-simulation-with-ngspice",
+      "license": "NOASSERTION",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "fcb9b89162e3acd9f37c7dc49e2776dfb787f325da1bbe2729d53838f3e4ad84",
+          "bytes": 6900,
+          "url": "https://github.com/easyeda/eext-simulation-with-ngspice/blob/6536f1dac4c44b366777cdb18e344b1603be1ffc/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-simulation"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-simulation-with-simulide",
+      "revision": "c8eb097e2e87abe80c2235bda2c2d2691fde509e",
+      "url": "https://github.com/easyeda/eext-simulation-with-simulide",
+      "license": "AGPL-3.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "f3f2224c2b03b9f9593c069206274c3fb9b8cf810902b0fdd683bec1fb50f3a6",
+          "bytes": 7396,
+          "url": "https://github.com/easyeda/eext-simulation-with-simulide/blob/c8eb097e2e87abe80c2235bda2c2d2691fde509e/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "35387c6e539752ea9185f61a97e0b89f2db42e5f25599335f0b802698e4e659f",
+          "bytes": 13900,
+          "url": "https://github.com/easyeda/eext-simulation-with-simulide/blob/c8eb097e2e87abe80c2235bda2c2d2691fde509e/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sch_Event",
+        "sch_SimulationEngine"
+      ],
+      "entryExports": [
+        "activate",
+        "readSimulationDataOnce"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-simulation"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-timing-analysis",
+      "revision": "f5e338b0c5d8f892c0e366067f7b0c60d4039180",
+      "url": "https://github.com/easyeda/eext-timing-analysis",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "941e6aa4022b24b49b72e289c727903432645d64af4990a590fa6f7d27891d50",
+          "bytes": 2569,
+          "url": "https://github.com/easyeda/eext-timing-analysis/blob/f5e338b0c5d8f892c0e366067f7b0c60d4039180/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "fb2d00aec3964d6a0fef9d71b6b5ac5db6c231e624a7a7ebd1965ba6383918a9",
+          "bytes": 37649,
+          "url": "https://github.com/easyeda/eext-timing-analysis/blob/f5e338b0c5d8f892c0e366067f7b0c60d4039180/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "dmt_SelectControl",
+        "pcb_Net",
+        "pcb_PrimitiveComponent",
+        "pcb_PrimitiveVia",
+        "pcb_SelectControl",
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_Message",
+        "sys_MessageBus"
+      ],
+      "entryExports": [
+        "about",
+        "activate",
+        "analyzeTiming",
+        "cancelSelection",
+        "changeTheme",
+        "highlightNets",
+        "quickAnalysis",
+        "test",
+        "testCapture"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-timing-analysis"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-timing-diagram-tool",
+      "revision": "596a50fb91d79ba0c99a02af22ad3c42d180b2b8",
+      "url": "https://github.com/easyeda/eext-timing-diagram-tool",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "d44e5ce0dfaca894f991bd272bde446752f770057406280144e2cbdf34395bc9",
+          "bytes": 3777,
+          "url": "https://github.com/easyeda/eext-timing-diagram-tool/blob/596a50fb91d79ba0c99a02af22ad3c42d180b2b8/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "c5362601fc9fd473b5fba1a0d9e677c49176d5f9021e06783f62b874b2824dd1",
+          "bytes": 1947,
+          "url": "https://github.com/easyeda/eext-timing-diagram-tool/blob/596a50fb91d79ba0c99a02af22ad3c42d180b2b8/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_I18n",
+        "sys_IFrame",
+        "sys_Message"
+      ],
+      "entryExports": [
+        "activate",
+        "openTimingDiagram",
+        "showAbout"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-timing-analysis"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "eext-update-components-attributes",
+      "revision": "b26080edcc9e5e3dddadadda33d4e329973f2fc0",
+      "url": "https://github.com/easyeda/eext-update-components-attributes",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "a5847fc2b9abe420fb7e27e881c5bc124ea2e08409ebb0289b5bc5070f107322",
+          "bytes": 2148,
+          "url": "https://github.com/easyeda/eext-update-components-attributes/blob/b26080edcc9e5e3dddadadda33d4e329973f2fc0/README.md"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "f1c8e35cf1751788cc31305168c04d5cd4d6b1e55568f2de444d39b7ddcdf9eb",
+          "bytes": 455,
+          "url": "https://github.com/easyeda/eext-update-components-attributes/blob/b26080edcc9e5e3dddadadda33d4e329973f2fc0/src/index.ts"
+        }
+      ],
+      "observedApiMounts": [
+        "sys_IFrame"
+      ],
+      "entryExports": [
+        "activate",
+        "debug",
+        "deleteAndPlaceNew",
+        "updateAttributes"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-component-library"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "extension-dev-mcp-tools",
+      "revision": "edce042465fcccb6dc9cce8c17179de121bbb1a1",
+      "url": "https://github.com/easyeda/extension-dev-mcp-tools",
+      "license": null,
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "79f0eba063069b19cee5ef26d39addbe2eed7f93148cccad67692d21fe1603ea",
+          "bytes": 3704,
+          "url": "https://github.com/easyeda/extension-dev-mcp-tools/blob/edce042465fcccb6dc9cce8c17179de121bbb1a1/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-extension-development"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "extension-dev-skill",
+      "revision": "d9148cba524149d17afcbfd196fab3226a8df5da",
+      "url": "https://github.com/easyeda/extension-dev-skill",
+      "license": null,
+      "licenseEvidence": [
+        "SKILL.md frontmatter: MIT"
+      ],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "c17a4b5544fc4f33ee8f89b9ac8ab23d2203692ae94fb22711832f606a3b0aad",
+          "bytes": 2755,
+          "url": "https://github.com/easyeda/extension-dev-skill/blob/d9148cba524149d17afcbfd196fab3226a8df5da/README.md"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "e6de42e119ac6c4ab00047d06631f420a8341c6da4739327d64143cc2aa320ff",
+          "bytes": 12616,
+          "url": "https://github.com/easyeda/extension-dev-skill/blob/d9148cba524149d17afcbfd196fab3226a8df5da/SKILL.md"
+        },
+        {
+          "path": "scripts/eda-api.js",
+          "sha256": "354d5cb1166c1bb3632b6e79b4db0b99c104044ab218c414b0da93a3768bd50c",
+          "bytes": 33184,
+          "url": "https://github.com/easyeda/extension-dev-skill/blob/d9148cba524149d17afcbfd196fab3226a8df5da/scripts/eda-api.js"
+        }
+      ],
+      "observedApiMounts": [
+        "dmt_SelectControl",
+        "members",
+        "sys_Dialog",
+        "sys_I18n",
+        "sys_Message",
+        "sys_Storage",
+        "sys_Window"
+      ],
+      "entryExports": [
+        "runFeature"
+      ],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-extension-development",
+        "easyeda-extension-use"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "jlc-mcli",
+      "revision": "7286a566efc96ff3f8cd461eedc503807508c8cf",
+      "url": "https://github.com/easyeda/jlc-mcli",
+      "license": "MIT",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "060a179ce83988d9c5981fadb854f63317d8dd337773e0b94cf4b685d675077f",
+          "bytes": 10700,
+          "url": "https://github.com/easyeda/jlc-mcli/blob/7286a566efc96ff3f8cd461eedc503807508c8cf/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [],
+      "disposition": "supplementary-reference"
+    },
+    {
+      "repository": "kicad-to-easyeda-eprj3",
+      "revision": "a16545dd7922455e6a20f69adeb234c924af08b5",
+      "url": "https://github.com/easyeda/kicad-to-easyeda-eprj3",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "006116776276777eba9ec1a6bf8f21fc2bf2b1365c240f8731b79985dd6f02ba",
+          "bytes": 10126,
+          "url": "https://github.com/easyeda/kicad-to-easyeda-eprj3/blob/a16545dd7922455e6a20f69adeb234c924af08b5/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-project-migration"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "mcad-integration-with-fusion360",
+      "revision": "50745428f53363e27628395751d211bfffdcaf15",
+      "url": "https://github.com/easyeda/mcad-integration-with-fusion360",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "05b8e726c8a3a60e95a409e7b98bc29a14a8875063f683140121a7dd090e4bb0",
+          "bytes": 8493,
+          "url": "https://github.com/easyeda/mcad-integration-with-fusion360/blob/50745428f53363e27628395751d211bfffdcaf15/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-cad-integration"
+      ],
+      "disposition": "workflow-source"
+    },
+    {
+      "repository": "online-gencad-viewer",
+      "revision": "cdc76cdaa520765831bf7e3674e47cb213c975f8",
+      "url": "https://github.com/easyeda/online-gencad-viewer",
+      "license": "Apache-2.0",
+      "licenseEvidence": [],
+      "archived": false,
+      "fork": false,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "17fa49a829db3dfd6b1c8313a5eab259c2049676e8dd42c9697960169ee773c6",
+          "bytes": 2800,
+          "url": "https://github.com/easyeda/online-gencad-viewer/blob/cdc76cdaa520765831bf7e3674e47cb213c975f8/README.md"
+        }
+      ],
+      "observedApiMounts": [],
+      "entryExports": [],
+      "validation": "source-inspected; runtime-not-tested",
+      "skillOwners": [
+        "easyeda-manufacturing-export"
+      ],
+      "disposition": "workflow-source"
+    }
+  ]
+}

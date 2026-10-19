@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · end-to-end"
+  short_description: "协调 EasyEDA 原理图设计、PCB 布局布线、DRC/DFM 和制造导出的完整流程，逐阶段验证实际产物。"
+  default_prompt: "使用 $easyeda-end-to-end 处理我的嘉立创 EDA 任务。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · project-migration"
+  short_description: "将 KiCad 或旧版 EasyEDA 工程转换到目标专业版格式，核对器件、网络、层与几何的迁移损失。"
+  default_prompt: "使用 $easyeda-project-migration 处理我的嘉立创 EDA 任务。"

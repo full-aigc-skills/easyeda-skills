@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · design-rules"
+  short_description: "按明确板厂工艺、叠层和网络要求生成或修改 EasyEDA PCB 线宽、间距、网络类和差分规则。"
+  default_prompt: "使用 $easyeda-design-rules 处理我的嘉立创 EDA 任务。"

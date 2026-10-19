@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · netlist-import"
+  short_description: "把已知 EasyEDA 网表重建为原理图，并处理器件查找、引脚映射和部分导入失败。"
+  default_prompt: "使用 $easyeda-netlist-import 处理我的嘉立创 EDA 任务。"

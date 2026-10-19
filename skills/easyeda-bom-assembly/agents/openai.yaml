@@ -1,0 +1,4 @@
+interface:
+  display_name: "EasyEDA · bom-assembly"
+  short_description: "比较或导出 EasyEDA BOM，使用交互式 BOM 核对装配位号、封装和贴片坐标。"
+  default_prompt: "使用 $easyeda-bom-assembly 处理我的嘉立创 EDA 任务。"
