@@ -35,6 +35,7 @@ metadata:
 
 - 上游文档的 companion 仓库旧名称可能失效，不能盲目 clone。
 - 格式脚本只覆盖部分契约，不能代替真实客户端验证。
+- 工程缓存 UUID 不一定可作为 lib_Device 放置来源；放置超时后回读实际对象，不把源码重放称为逐器件生成。
 
 ## 使用示例
 
@@ -44,3 +45,8 @@ metadata:
 
 来源性质：官方技能整合，已将传输改为内置 MCP。本技能的存在不代表上游扩展已安装或工作流已实测。
 上游技能名：`easyeda-eprj3`；这里为中文整理与原生 MCP 适配版本。
+
+## 已随包携带的官方完整资源
+
+先读 [包内资源与内置 MCP 适配](references/bundled-official.md)，再按任务读取 [完整官方原文](upstream/SKILL.md)。原文、脚本、Schema、样例和配套资料已随本技能携带。
+官方原文中的 WebSocket Bridge、旧安装路径或 companion 旧仓库名仅作来源记录；实时编辑始终使用上述原生 MCP，离线工具使用本技能内的实际路径。不要启动 upstream/scripts/bridge-server.mjs。

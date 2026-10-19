@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-19",
+  "version": "0.1.0-dev.20261019.6",
+  "officialSkills": 5,
+  "derivedSkills": 28,
+  "officialBundles": 9,
+  "officialFiles": 2769,
+  "uniqueSchemas": 297,
+  "physicalSchemaCopies": 594,
+  "apiReferenceFiles": 422,
+  "primitiveReferences": 291,
+  "formatExamples": 302,
+  "extensionRecipes": 46,
+  "sourceUnitTestsPassed": 12,
+  "pluginUnitTestsPassed": 5,
+  "upstreamEprj3SmokeChecksPassed": 121,
+  "upstreamSdkQueryTestsPassed": 2,
+  "schemasCompiled": 297,
+  "formatPositiveNegativePassed": true,
+  "normalizedProjectComponentRecords": 4,
+  "normalizedComponentSchemasPassed": 4,
+  "generatedProjectStructure": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "codex": {
+    "installed": true,
+    "enabled": true,
+    "discoveredSkills": 33,
+    "snapshotFilesMatched": 2925
+  },
+  "sdkQuery": {
+    "installedResourceUsed": true,
+    "targetApiTypes": "0.4.26",
+    "typescript": "5.9.3"
+  },
+  "nativeMcp": {
+    "endpoint": "http://127.0.0.1:31637/mcp",
+    "independentProject": "Official-Assets-Acceptance",
+    "schematicPhysicalComponents": 1,
+    "schematicObjects": 4,
+    "wireGroups": 2,
+    "pcbComponents": 1,
+    "padNets": [
+      "VCC",
+      "GND"
+    ],
+    "writeEnabled": false,
+    "uiActivationRequiredForColdDocuments": true
+  },
+  "upstreamAudit": {
+    "exitCode": 1,
+    "failedRecordTypes": [
+      "SCH COMPONENT"
+    ],
+    "missingFields": [
+      "groupId",
+      "locked"
+    ],
+    "originalSnapshotModified": false,
+    "schemaLoosened": false,
+    "adaptation": "normalize_component_defaults.py previews by default; --apply only fills absent fields in authorized project"
+  },
+  "boundaries": [
+    "No second Bridge configured or launched",
+    "No user original project modified",
+    "No claim of all 97 official plugins runtime-tested",
+    "No claim of a new full manufacturing acceptance for this resource-only update"
+  ]
+}

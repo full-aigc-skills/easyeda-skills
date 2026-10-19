@@ -17,7 +17,7 @@ def build(root=ROOT):
     with zipfile.ZipFile(target, 'w', zipfile.ZIP_DEFLATED) as archive:
         for path in sorted(root.rglob('*')):
             parts = path.relative_to(root).parts
-            if any(p in {'.git', '.local', 'dist', '__pycache__', '.DS_Store'} for p in parts):
+            if any(p in {'.git', '.local', 'dist', '__pycache__', '.DS_Store', 'node_modules', '.cache', '.venv', 'venv', '.pytest_cache', '.mypy_cache', '.ruff_cache', 'artifacts', 'coverage', 'htmlcov'} for p in parts):
                 continue
             if path.is_symlink():
                 raise ValueError('打包路径不得包含符号链接：' + str(path))

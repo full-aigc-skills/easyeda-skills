@@ -11,7 +11,7 @@
 
 ## 查询方法
 
-原技能包含 eda-api.js 查询器。本包不捆绑该脚本及 node_modules；实际开发前按 operations.md 固定来源获取官方查询器。它的 --project 必须指向目标扩展工程，依赖解析也来自该工程。
+原技能包含 eda-api.js 查询器。本包已携带该脚本及全部配方/资料，但不捆绑 node_modules；直接使用 [包内查询器](bundled-official.md)。它的 --project 必须指向目标扩展工程，依赖解析也来自该工程。
 
 ```text
 node <已安装官方技能的绝对路径>/scripts/eda-api.js doctor --project <目标工程>

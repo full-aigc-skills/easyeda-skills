@@ -1,5 +1,6 @@
 """离线检查技能自包含、来源映射和元数据，不宣称运行行为通过。"""
 import hashlib
+import importlib.util
 import json
 from pathlib import Path
 import re
@@ -9,6 +10,10 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def validate(root=ROOT):
+    spec = importlib.util.spec_from_file_location('easyeda_official_check', root / 'scripts/validate_official.py')
+    official_module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(official_module)
+    official = official_module.validate(root)
     catalog = json.loads((root / 'catalog.json').read_text())
     lock = json.loads((root / 'source-lock.json').read_text())
     names = [s['name'] for s in catalog['skills']]
@@ -50,6 +55,10 @@ def validate(root=ROOT):
             if path.is_symlink():
                 raise ValueError('技能中不允许外部符号链接：' + str(path))
         for document in folder.rglob('*.md'):
+            # 固定上游快照保持原始字节，旧安装路径/原仓库链接不能在这里重写。
+            # 完整性和自包含文件树由 official-assets.json 严格校验；适配入口仍检查链接。
+            if document.is_relative_to(folder / 'upstream'):
+                continue
             for target in re.findall(r'\[[^\]]*\]\(([^)]+)\)', document.read_text()):
                 target = target.strip().strip('<>')
                 if urlsplit(target).scheme or target.startswith('#'):
@@ -57,7 +66,7 @@ def validate(root=ROOT):
                 linked = (document.parent / unquote(target.split('#')[0])).resolve()
                 if not linked.is_relative_to(folder.resolve()) or not linked.is_file():
                     raise ValueError('技能引用不自包含：' + str(document) + ' → ' + target)
-    return {'ok': True, 'skills': len(names), 'officialAdaptations':
+    return {**official, 'ok': True, 'skills': len(names), 'officialAdaptations':
             sum(s['origin'] == 'official-adapted' for s in catalog['skills']),
             'upstreamRepositories': len(records)}
 

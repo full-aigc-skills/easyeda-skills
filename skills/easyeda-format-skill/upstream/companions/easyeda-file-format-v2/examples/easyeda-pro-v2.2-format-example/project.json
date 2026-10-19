@@ -1,0 +1,399 @@
+{
+  "schematics": {
+    "324ebe00d3ad4f43b364b3e0db4c5cb8": {
+      "name": "Schematic1",
+      "sheets": [
+        {
+          "name": "P1",
+          "id": 1,
+          "uuid": "aa1ebc2929054073a8a7cdad9451d85b"
+        },
+        {
+          "name": "P2",
+          "id": 2,
+          "uuid": "7b9a481ef7e74ab98ad1d58f32a39af2"
+        }
+      ]
+    },
+    "e204390255ac4eba973d82b97125a470": {
+      "name": "Schematic2",
+      "sheets": [
+        {
+          "name": "P1",
+          "id": 1,
+          "uuid": "7eb4d82ca41542fdb29dd5a5ae2f4479"
+        }
+      ]
+    }
+  },
+  "pcbs": {
+    "21bf3cb7badf4afaad0dd41b43ce6d3b": "PCB1",
+    "de0a8ca498fb4cf7ba7cff4f6a30e115": "PCB2"
+  },
+  "panels": {
+    "5e182b6d5b48426fad374255e5efd1dc": "Panel_1"
+  },
+  "symbols": {
+    "6644fff3ec4746afad9f4bc9616a8eee": {
+      "source": "dae013dc9fb24993ad62a51f9f80d9cd|0819f05c4eef4c71ace90d822a990e87",
+      "desc": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "custom_tags": "[\"特殊器件\"]",
+      "title": "Drawing-Symbol_A4",
+      "version": "1763433565736",
+      "type": 20
+    },
+    "3ebcb5bba1394672aafec53228427e91": {
+      "source": "337f98afd0264cae93d16cc3bf65754a|0819f05c4eef4c71ace90d822a990e87",
+      "desc": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "custom_tags": "[]",
+      "title": "电阻",
+      "version": "1763634110389",
+      "type": 2
+    },
+    "3f2c29b996aa438aa7b974afacb3062c": {
+      "source": "9b22c8ce281e45e586f53e833f42da4a|0819f05c4eef4c71ace90d822a990e87",
+      "desc": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "custom_tags": "[]",
+      "title": "Capacitance",
+      "version": "1763633989879",
+      "type": 2
+    },
+    "3a338b75d3fc49b7b4508ad13618de02": {
+      "source": "c1b8b751a29345708c24bcef9a67e2b3|0819f05c4eef4c71ace90d822a990e87",
+      "desc": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "custom_tags": "[]",
+      "title": "Power-VCC",
+      "version": "1767178132",
+      "type": 18
+    },
+    "1347a49321b84e7198994d5e008fcbbe": {
+      "source": "542d01b8b25e4236a453d7437c3944df|0819f05c4eef4c71ace90d822a990e87",
+      "desc": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "custom_tags": "[]",
+      "title": "Ground-GND",
+      "version": "1768472523513",
+      "type": 18
+    },
+    "c8d12e89f0934daaa4fa6c99daae5b71": {
+      "source": "2e9f04ed8246407db6aeeedff6aeec00|0819f05c4eef4c71ace90d822a990e87",
+      "desc": "10uH ±10%",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "custom_tags": "[\"电感/线圈/变压器\",\"贴片电感\"]",
+      "title": "SDFL1608S100KTF",
+      "version": "1763633943184",
+      "type": 2
+    },
+    "94934fa0a59e4e0a87482fea619f531e": {
+      "source": "9efc5969ac6c4c83b5123274296715d2|0819f05c4eef4c71ace90d822a990e87",
+      "desc": "Netport-IN",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "custom_tags": "[]",
+      "title": "Netport-IN",
+      "version": "1758698978696",
+      "type": 19
+    }
+  },
+  "footprints": {
+    "7e30682893f74f5f9297a8d0e547deba": {
+      "title": "R0603",
+      "source": "50b4943912284dab97752312e589e9e2|0819f05c4eef4c71ace90d822a990e87",
+      "version": "1766479705",
+      "type": 4,
+      "desc": "0603;-;1206;1608;0201;SMD;0805;---;2.2KR;R0603;R603;603;插件;Res2;0603R;ESD0603;0603-S;0603-R;LC-0603_R;RES0603;RES0603-SMD-2P;5101%;Res0603;ROHM Semiconductor",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "custom_tags": "[\"RES-SMD\"]"
+    },
+    "1a0a2da531884ff4ba52e3c819043637": {
+      "title": "C0603",
+      "source": "76d6c29a47804db487f8a92b2621751b|0819f05c4eef4c71ace90d822a990e87",
+      "version": "1734501471",
+      "type": 4,
+      "desc": ";0603;1206;0805;0201;/;---;-;SMD;C0603;AAAAAA1;c0603;0603封装;Cap;CAP;0604;C0603_L;0603-CAP;1608;0704",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "custom_tags": "[\"CAP-SMD\"]"
+    },
+    "6714e175bd78407fb240a2953421fc33": {
+      "title": "L0603",
+      "source": "369762e5ba6942f8b95f861c27425f7c|0819f05c4eef4c71ace90d822a990e87",
+      "version": "1765883525",
+      "type": 4,
+      "desc": "0603;SMD;-;0201;0402;1608;SMD,1x1.7mm;SMD,1x1.6mm;SMD160808;0602;L0603;FB-0603;0603-L;120R2A;C0603;MPZ1608S221AT000100M/220R;FB_0603;0630;0603_L;FBEAD/,0Ohm,1KOhm,400mA,SMDSOLDERING;00603;1.6x0.8mm;磁珠0603;BEAD-0603;DIP",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "custom_tags": "[\"IND-SMD\"]"
+    }
+  },
+  "devices": {
+    "9bb222e758404bf989041750f60ffeef": {
+      "title": "Drawing-Symbol_A4",
+      "attributes": {
+        "@Board Name": "",
+        "@Page Name": "",
+        "@Create Date": "",
+        "@Create Time": "",
+        "@Page Count": "",
+        "@Page No": "",
+        "@Project Name": "",
+        "@Schematic Name": "",
+        "@Update Date": "",
+        "@Update Time": "",
+        "@Assembly Variant": "",
+        "Company": "嘉立创EDA",
+        "Drawed": "",
+        "Page Size": "A4",
+        "Reviewed": "",
+        "Symbol": "6644fff3ec4746afad9f4bc9616a8eee",
+        "Version": "V1.0",
+        "Border": "1",
+        "Title Block Position": "3",
+        "Size": "A4",
+        "Width": "1170",
+        "Height": "825",
+        "Region Start": "1",
+        "X Region Count": "6",
+        "Y Region Count": "4",
+        "Blade Width": "10",
+        "Color": "",
+        "Title Block": "1",
+        "Part Number": "",
+        "Name": "",
+        "Footprint": "",
+        "Description": ""
+      },
+      "description": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "images": [
+        ""
+      ],
+      "source": "bc676184ec9748d7b372ad543982403a|0819f05c4eef4c71ace90d822a990e87",
+      "version": "1763386843",
+      "custom_tags": [
+        ""
+      ]
+    },
+    "f279150d1dd34d5aa3406cb695f44743": {
+      "title": "Res_0603",
+      "attributes": {
+        "Convert to PCB": "yes",
+        "Add into BOM": "yes",
+        "Designator": "R?",
+        "Supplier Footprint": "0603",
+        "Symbol": "3ebcb5bba1394672aafec53228427e91",
+        "Footprint": "7e30682893f74f5f9297a8d0e547deba",
+        "3D Model": "fc143cca1e79419f9cd78b61e9279f08",
+        "3D Model Title": "R0603",
+        "3D Model Transform": "31.8897,63.7794,0,90,0,0,0,0,0",
+        "Value": "10K",
+        "Name": "={Value}",
+        "Sim Model": "",
+        "Sim Model Title": "",
+        "Sim Model Path": "",
+        "NGSpice Model": "",
+        "NGSpice Model Title": "",
+        "NGspice Model Path": "",
+        "Description": ""
+      },
+      "description": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "images": [
+        ""
+      ],
+      "source": "f61af53b8d604d888b6dd9daa1a301b0|0819f05c4eef4c71ace90d822a990e87",
+      "version": "1763634109",
+      "custom_tags": "[\"电阻\",\"贴片电阻\"]"
+    },
+    "b2f3802d3fc24778a484aff2a1c515e9": {
+      "title": "CAP_0603",
+      "attributes": {
+        "Convert to PCB": "yes",
+        "Add into BOM": "yes",
+        "Designator": "C?",
+        "Supplier Footprint": "0603",
+        "Symbol": "3f2c29b996aa438aa7b974afacb3062c",
+        "Footprint": "1a0a2da531884ff4ba52e3c819043637",
+        "3D Model": "ac125912035d415993ca9572d50418b1",
+        "3D Model Title": "C0603_L1.6-W0.8-H0.8",
+        "3D Model Transform": "62.992,31.496,0,0,0,0,0,0,0",
+        "Value": "100nF",
+        "Name": "={Value}",
+        "Sim Model": "",
+        "Sim Model Title": "",
+        "Sim Model Path": "",
+        "NGSpice Model": "",
+        "NGSpice Model Title": "",
+        "NGspice Model Path": "",
+        "Description": ""
+      },
+      "description": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "images": [
+        ""
+      ],
+      "source": "4e48d71315ce4d4c9f2ca294a3b1380b|0819f05c4eef4c71ace90d822a990e87",
+      "version": "1763633989",
+      "custom_tags": "[]"
+    },
+    "da74e0f24fd74f25ab308ea39d2ec00a": {
+      "title": "Power-VCC",
+      "attributes": {
+        "Global Net Name": "VCC",
+        "Name": "VCC",
+        "Symbol": "3a338b75d3fc49b7b4508ad13618de02",
+        "3D Model": "",
+        "3D Model Title": "",
+        "3D Model Transform": "",
+        "Footprint": "",
+        "Description": ""
+      },
+      "description": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "images": [
+        ""
+      ],
+      "source": "b381658129d94456b54f23250ef5a375|0819f05c4eef4c71ace90d822a990e87",
+      "version": "1767178132",
+      "custom_tags": "[\"特殊器件\",\"网络标识\"]"
+    },
+    "c2c638e5cbd4451aa29cbbdd94f88fd4": {
+      "title": "Ground-GND",
+      "attributes": {
+        "Global Net Name": "GND",
+        "Name": "GND",
+        "Symbol": "1347a49321b84e7198994d5e008fcbbe",
+        "3D Model": "",
+        "3D Model Title": "",
+        "3D Model Transform": "",
+        "Footprint": "",
+        "Description": ""
+      },
+      "description": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "images": [
+        ""
+      ],
+      "source": "9a64ac5790a940f7ae40fc736dc6faff|0819f05c4eef4c71ace90d822a990e87",
+      "version": "1768472523",
+      "custom_tags": "[\"特殊器件\",\"网络标识\"]"
+    },
+    "96efe80fd4254194aeb3a5a8b9d5ef1d": {
+      "title": "L_0603",
+      "attributes": {
+        "Supplier Footprint": "L0603",
+        "Add into BOM": "yes",
+        "Convert to PCB": "yes",
+        "Symbol": "c8d12e89f0934daaa4fa6c99daae5b71",
+        "Designator": "L?",
+        "Footprint": "6714e175bd78407fb240a2953421fc33",
+        "3D Model": "2bc5ec593d464d6ba9807aec0b5673c2",
+        "3D Model Title": "L0603_L1.6-W0.8-H0.5_BEAD",
+        "3D Model Transform": "62.992,31.496,0,180,0,0,0.094,0.629,0",
+        "Value": "10uH",
+        "Name": "={Value}",
+        "Sim Model": "",
+        "Sim Model Title": "",
+        "Sim Model Path": "",
+        "NGSpice Model": "",
+        "NGSpice Model Title": "",
+        "NGspice Model Path": "",
+        "Description": ""
+      },
+      "description": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "images": [
+        ""
+      ],
+      "source": "edbd3c88a5354798a167efcb04f7b6a2|0819f05c4eef4c71ace90d822a990e87",
+      "version": "1763633942",
+      "custom_tags": "[]"
+    },
+    "d829916667534f1085450c01ed541c6b": {
+      "title": "Netport-IN",
+      "attributes": {
+        "Symbol": "94934fa0a59e4e0a87482fea619f531e",
+        "Name": "",
+        "Relevance": "",
+        "Footprint": "",
+        "Description": "Netport-IN"
+      },
+      "description": "Netport-IN",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "images": [
+        ""
+      ],
+      "source": "d1791174cc834e86a381cf4678cd8f5f|0819f05c4eef4c71ace90d822a990e87",
+      "version": "1763216468",
+      "custom_tags": "[\"特殊器件\",\"网络端口\"]"
+    }
+  },
+  "boards": {
+    "Board1": {
+      "schematic": "324ebe00d3ad4f43b364b3e0db4c5cb8",
+      "pcb": "21bf3cb7badf4afaad0dd41b43ce6d3b"
+    },
+    "Board2": {
+      "schematic": "e204390255ac4eba973d82b97125a470",
+      "pcb": "de0a8ca498fb4cf7ba7cff4f6a30e115"
+    }
+  },
+  "config": {
+    "title": "easyeda-pro-v2.2-format-example",
+    "cbbProject": false,
+    "defaultSheet": "9bb222e758404bf989041750f60ffeef",
+    "editorVersion": "2.2.48.10"
+  }
+}

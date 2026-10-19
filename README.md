@@ -1,6 +1,6 @@
 # EasyEDA Skills
 
-面向嘉立创 EDA / EasyEDA **专业版**的 33 个中文 Agent Skills，执行使用客户端内置 MCP。包含 5 个官方技能的中文整理与传输适配，以及 28 个从官方扩展和接口提炼的工作流。当前版本 `0.1.0-dev.20261019.4`，GitHub 开发候选，尚未创建正式 Release。
+面向嘉立创 EDA / EasyEDA **专业版**的 33 个中文 Agent Skills，执行使用客户端内置 MCP。包含 5 个官方技能的中文整理与传输适配，以及 28 个从官方扩展和接口提炼的工作流。当前版本 `0.1.0-dev.20261019.6`，GitHub 开发候选，尚未创建正式 Release。
 
 该包独立维护知识；`easyeda-plugin` 通过可校验的文件快照携带这些技能。每个技能都有自己的 references，无需依赖兄弟目录。不是嘉立创官方发行包。
 
@@ -60,7 +60,13 @@ python3 -B skills/easyeda-mcp-setup/scripts/native_mcp.py current-project
 
 ## 官方整合方法
 
-官方 API、原理图扇出、eprj3、格式和扩展开发技能分别适配到本包。领域限制保留在这五项的 `references/official-adaptation.md`；未复制旧 Bridge Server、第三方布线器、官方格式校验器或 node_modules。未捆绑工具明确给出上游定位方式，不能执行本包不存在的脚本。
+官方 API、原理图扇出、eprj3、格式和扩展开发技能的完整原文与全部跟踪文件已分别随对应技能携带于 `upstream/`。共 9 份固定来源快照、2,769 个文件；格式技能有 297 个 Schema、291 份图元说明、302 份样例，eprj3 技能内再携带独立格式依赖，按单技能安装也完整。
+
+- [逐文件来源与 SHA-256](official-assets.json)：包含原始仓库、固定修订、相对路径和许可依据。
+- API 参考共 422 文件，`.eprj3` 脚本/模板/样例、格式校验器及扩展开发 46 个 recipes 全部在包内。
+- 实时编辑继续只用客户端内置 MCP；原版 Bridge 脚本仅为来源快照，不启动、不配置第二个服务。
+- 原版工具不附带 node_modules。格式校验通过技能内 `scripts/validate_format.py` 显式把锁定依赖安装到可写缓存；保留版本及 integrity，只将镜像下载 URL 映射到 npm 官方 registry。
+- 中文入口和 `references/bundled-official.md` 指向包内实际资源。上游原文保持原始字节，旧安装路径/仓库名按适配说明映射；不声称每个上游历史链接都仍有效。
 
 [仓库覆盖表](docs/source-analysis.md) 列出全部 97 个组织仓库、对应技能及未纳入执行的原因。[source-lock.json](source-lock.json) 记录固定 commit、实际读取文件与 SHA-256；这代表所列文件的静态检查，不代表 97 个仓库的全部源码或真实运行均已审计。
 
@@ -72,13 +78,13 @@ python3 -B scripts/validate_package.py
 python3 -B -m unittest discover -s tests -v
 ```
 
-修改 `catalog.json` 后执行 `python3 -B scripts/render_skills.py`。官方五项适配细则单独维护，不被渲染器覆盖。`scripts/refresh_upstream.py` 是显式联网刷新，需要现有 `gh` 和访问权限；它不执行上游脚本。刷新后先审查修订差异，再重新生成技能和插件快照。
+修改 `catalog.json` 后执行 `python3 -B scripts/render_skills.py`。官方五项适配细则单独维护，不被渲染器覆盖。更新固定 checkout 后运行 `python3 -B scripts/vendor_official.py --source-root .local/official-sources`，再用 `--check` 比对全部原始文件。`scripts/refresh_upstream.py` 是显式联网刷新，需要现有 `gh` 和访问权限；它不执行上游脚本。刷新后先审查修订差异，再重新生成技能和插件快照。
 
 ## 已验证与限制
 
-本地校验：33 个技能命名/frontmatter/相对引用/来源映射；HTTP fixture 验证嵌套错误、空工程、多会话和只读请求。真实客户端已验证 doctor、API 帮助与当前工程查询，服务版本为 4.1.71.7a7261be，最近返回 `project:null`、`currentDocument:null`。这表示桥接正常，但没有可读取的当前工程。
+包校验覆盖 33 个技能及完整官方资源，缺失、篡改、符号链接和依赖污染均会失败。官方脚本、格式正反例、SDK 查询、Codex 安装和内置 MCP 实测结果见 [官方资源验收](docs/official-assets-validation.md)。
 
-原理图写入、PCB 布局/布线、DRC、仿真与实际制造文件导出尚未做本机实测。第三方扩展可能需要另行安装，只有菜单入口的功能也可能需要补上层接口；技能存在不表示这些能力已安装。发布、全局安装与 CI 尚未执行。
+此前独立 LED 测试已完成原理图创建到制造导出；官方快速入门 Demo 完成原理图源码重放、PCB 重布及修复、严格 DRC 0 和保存重开。缓存 UUID 的逐器件放置超时，不能称为该示例从空白逐器件设计成功。其他官方示例、仿真、外部布线器等没有因资源补齐而自动获得运行验收。
 
 许可与来源见 [NOTICE](NOTICE)。不提供自动下单与付款流程。
 

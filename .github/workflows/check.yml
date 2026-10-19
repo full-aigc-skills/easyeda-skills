@@ -8,5 +8,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - run: python3 -B scripts/validate_package.py
+      - run: python3 -B skills/easyeda-format-skill/scripts/validate_format.py --install-deps --runtime-dir .local/format-runtime
       - run: python3 -B -m unittest discover -s tests -v
+        env:
+          EASYEDA_FORMAT_RUNTIME: ${{ github.workspace }}/.local/format-runtime
+      - run: node skills/easyeda-eprj3/upstream/test/smoke.js
+      - run: npm install --prefix .local/sdk-fixture --ignore-scripts --no-audit --no-fund --registry=https://registry.npmjs.org typescript@5.9.3 @jlceda/pro-api-types@0.2.58
+      - run: NODE_PATH="$PWD/node_modules" node "$GITHUB_WORKSPACE/skills/easyeda-extension-development/upstream/scripts/eda-api.test.js"
+        working-directory: .local/sdk-fixture

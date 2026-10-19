@@ -116,6 +116,11 @@ metadata:
         body += f'\n来源性质：{source_kind}。本技能的存在不代表上游扩展已安装或工作流已实测。\n'
         if item['upstreamSkill']:
             body += f'上游技能名：`{item["upstreamSkill"]}`；这里为中文整理与原生 MCP 适配版本。\n'
+            body += '\n## 已随包携带的官方完整资源\n\n'
+            body += '先读 [包内资源与内置 MCP 适配](references/bundled-official.md)，再按任务读取 '
+            body += '[完整官方原文](upstream/SKILL.md)。原文、脚本、Schema、样例和配套资料已随本技能携带。\n'
+            body += '官方原文中的 WebSocket Bridge、旧安装路径或 companion 旧仓库名仅作来源记录；'
+            body += '实时编辑始终使用上述原生 MCP，离线工具使用本技能内的实际路径。不要启动 upstream/scripts/bridge-server.mjs。\n'
         if name == 'easyeda-extension-use':
             body += '\n先读 [内部扩展调用](references/eext-integration.md)，包含 14 个领域接口与实测帮助查询替代路径。\n'
         if name == 'easyeda-use':
